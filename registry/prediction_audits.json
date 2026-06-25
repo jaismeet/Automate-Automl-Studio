@@ -1,0 +1,128 @@
+[
+  {
+    "audit_id": "d3f92e2dede64e758dff520cb8360567",
+    "created_at": "2026-06-24T07:31:12Z",
+    "request_type": "single",
+    "source_name": null,
+    "model_id": "fc76c659a8044b7fab4cbf5eb54b0d59",
+    "dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "best_model": "AdaBoost Classifier",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9662,
+    "row_count": 1,
+    "threshold": 0.5,
+    "input_preview": [
+      {
+        "customer_id": "C0001",
+        "age": 27,
+        "tenure_months": 7,
+        "city": "Bangalore",
+        "plan": "Basic",
+        "contract_type": "Annual",
+        "internet_service": "Mobile",
+        "monthly_charges": 620,
+        "total_charges": 4515,
+        "support_tickets": 3,
+        "satisfaction_score": 7,
+        "last_login_days": 21,
+        "payment_method": "UPI"
+      }
+    ],
+    "predictions": [
+      0
+    ],
+    "prediction_details": [
+      {
+        "row": 1,
+        "prediction": 0,
+        "confidence": 0.7127,
+        "confidence_band": "medium",
+        "low_confidence": false,
+        "probabilities": {
+          "0": 0.7127,
+          "1": 0.2873
+        }
+      }
+    ],
+    "confidence_summary": {
+      "available": true,
+      "average_confidence": 0.7127,
+      "minimum_confidence": 0.7127,
+      "high_confidence_rows": 0,
+      "medium_confidence_rows": 1,
+      "low_confidence_rows": 0,
+      "prediction_distribution": [
+        {
+          "label": "0",
+          "count": 1
+        }
+      ],
+      "recommendation": "Predictions are usable, but review medium-confidence rows for business-critical decisions."
+    }
+  },
+  {
+    "audit_id": "f709e49d5f9544a7a4e7a3dcb3244fb4",
+    "created_at": "2026-06-24T07:30:22Z",
+    "request_type": "single",
+    "source_name": null,
+    "model_id": "fc76c659a8044b7fab4cbf5eb54b0d59",
+    "dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "best_model": "AdaBoost Classifier",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9662,
+    "row_count": 1,
+    "threshold": 0.5,
+    "input_preview": [
+      {
+        "customer_id": "C0001",
+        "age": 27,
+        "tenure_months": 7,
+        "city": "Bangalore",
+        "plan": "Basic",
+        "contract_type": "Annual",
+        "internet_service": "Mobile",
+        "monthly_charges": 620,
+        "total_charges": 4515,
+        "support_tickets": 3,
+        "satisfaction_score": 7,
+        "last_login_days": 21,
+        "payment_method": "UPI"
+      }
+    ],
+    "predictions": [
+      0
+    ],
+    "prediction_details": [
+      {
+        "row": 1,
+        "prediction": 0,
+        "confidence": 0.7127,
+        "confidence_band": "medium",
+        "low_confidence": false,
+        "probabilities": {
+          "0": 0.7127,
+          "1": 0.2873
+        }
+      }
+    ],
+    "confidence_summary": {
+      "available": true,
+      "average_confidence": 0.7127,
+      "minimum_confidence": 0.7127,
+      "high_confidence_rows": 0,
+      "medium_confidence_rows": 1,
+      "low_confidence_rows": 0,
+      "prediction_distribution": [
+        {
+          "label": "0",
+          "count": 1
+        }
+      ],
+      "recommendation": "Predictions are usable, but review medium-confidence rows for business-critical decisions."
+    }
+  }
+]

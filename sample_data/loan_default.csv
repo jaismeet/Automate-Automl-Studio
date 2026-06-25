@@ -1,0 +1,181 @@
+applicant_id,age,annual_income,credit_score,loan_amount,debt_to_income,employment_status,home_ownership,missed_payments_12m,loan_purpose,loan_term_months,defaulted
+A0001,26,293750,537,83500,0.19,Self-employed,Family,0,Medical,24,1
+A0002,30,307500,554,107000,0.26,Contract,Rent,5,Debt consolidation,36,1
+A0003,34,321250,571,130500,0.33,Business owner,Own,3,Home improvement,48,1
+A0004,38,335000,588,154000,0.4,Salaried,Mortgage,1,Medical,60,0
+A0005,42,348750,605,177500,0.47,Self-employed,Family,6,Debt consolidation,12,1
+A0006,46,362500,622,201000,0.54,Contract,Rent,4,Home improvement,24,1
+A0007,50,376250,639,224500,0.15,Business owner,Own,2,Medical,36,0
+A0008,54,390000,656,248000,0.22,Salaried,Mortgage,0,Debt consolidation,48,0
+A0009,58,403750,673,271500,0.29,Self-employed,Family,5,Home improvement,60,1
+A0010,23,417500,690,295000,0.36,Contract,Rent,3,Medical,12,1
+A0011,27,431250,707,318500,0.43,Business owner,Own,6,Debt consolidation,24,1
+A0012,31,445000,724,342000,0.5,Salaried,Mortgage,4,Home improvement,36,1
+A0013,35,458750,741,365500,0.57,Self-employed,Family,2,Medical,48,1
+A0014,39,472500,758,389000,0.18,Contract,Rent,0,Debt consolidation,60,0
+A0015,43,486250,775,412500,0.25,Business owner,Own,5,Home improvement,12,0
+A0016,47,500000,522,436000,0.32,Salaried,Mortgage,5,Medical,24,1
+A0017,51,513750,539,459500,0.39,Self-employed,Family,3,Debt consolidation,36,1
+A0018,55,527500,556,483000,0.46,Contract,Rent,1,Home improvement,48,1
+A0019,59,541250,573,506500,0.53,Business owner,Own,6,Medical,60,1
+A0020,24,555000,590,530000,0.14,Salaried,Mortgage,4,Debt consolidation,12,1
+A0021,28,568750,607,553500,0.21,Self-employed,Family,2,Home improvement,24,1
+A0022,32,582500,624,577000,0.28,Contract,Rent,0,Medical,36,1
+A0023,36,596250,641,600500,0.35,Business owner,Own,5,Debt consolidation,48,1
+A0024,40,610000,658,624000,0.42,Salaried,Mortgage,3,Home improvement,60,1
+A0025,44,623750,675,647500,0.49,Self-employed,Family,1,Medical,12,1
+A0026,48,637500,692,671000,0.56,Contract,Rent,6,Debt consolidation,24,1
+A0027,52,651250,709,694500,0.17,Business owner,Own,2,Home improvement,36,0
+A0028,56,665000,726,718000,0.24,Salaried,Mortgage,0,Medical,48,0
+A0029,60,678750,743,741500,0.31,Self-employed,Family,5,Debt consolidation,60,0
+A0030,25,692500,760,765000,0.38,Contract,Rent,3,Home improvement,12,1
+A0031,29,706250,777,788500,0.45,Business owner,Own,1,Medical,24,0
+A0032,33,720000,524,812000,0.52,Salaried,Mortgage,1,Debt consolidation,36,1
+A0033,37,733750,541,835500,0.13,Self-employed,Family,6,Home improvement,48,1
+A0034,41,747500,558,859000,0.2,Contract,Rent,4,Medical,60,1
+A0035,45,761250,575,882500,0.27,Business owner,Own,2,Debt consolidation,12,1
+A0036,49,775000,592,906000,0.34,Salaried,Mortgage,0,Home improvement,24,1
+A0037,53,788750,609,929500,0.41,Self-employed,Family,5,Medical,36,1
+A0038,57,802500,626,953000,0.48,Contract,Rent,3,Debt consolidation,48,1
+A0039,22,816250,643,976500,0.55,Business owner,Own,1,Home improvement,60,1
+A0040,26,830000,660,80000,0.16,Salaried,Mortgage,6,Medical,12,0
+A0041,30,843750,677,103500,0.23,Self-employed,Family,4,Debt consolidation,24,1
+A0042,34,857500,694,127000,0.3,Contract,Rent,2,Home improvement,36,0
+A0043,38,871250,711,150500,0.37,Business owner,Own,5,Medical,48,0
+A0044,42,885000,728,174000,0.44,Salaried,Mortgage,3,Debt consolidation,60,0
+A0045,46,898750,745,197500,0.51,Self-employed,Family,1,Home improvement,12,0
+A0046,50,912500,762,221000,0.12,Contract,Rent,6,Medical,24,0
+A0047,54,926250,779,244500,0.19,Business owner,Own,4,Debt consolidation,36,0
+A0048,58,940000,526,268000,0.26,Salaried,Mortgage,4,Home improvement,48,1
+A0049,23,953750,543,291500,0.33,Self-employed,Family,2,Medical,60,1
+A0050,27,967500,560,315000,0.4,Contract,Rent,0,Debt consolidation,12,1
+A0051,31,981250,577,338500,0.47,Business owner,Own,5,Home improvement,24,1
+A0052,35,995000,594,362000,0.54,Salaried,Mortgage,3,Medical,36,1
+A0053,39,1008750,611,385500,0.15,Self-employed,Family,1,Debt consolidation,48,0
+A0054,43,1022500,628,409000,0.22,Contract,Rent,6,Home improvement,60,1
+A0055,47,1036250,645,432500,0.29,Business owner,Own,4,Medical,12,0
+A0056,51,1050000,662,456000,0.36,Salaried,Mortgage,2,Debt consolidation,24,0
+A0057,55,1063750,679,479500,0.43,Self-employed,Family,0,Home improvement,36,1
+A0058,59,1077500,696,503000,0.5,Contract,Rent,5,Medical,48,1
+A0059,24,1091250,713,526500,0.57,Business owner,Own,1,Debt consolidation,60,0
+A0060,28,1105000,730,550000,0.18,Salaried,Mortgage,6,Home improvement,12,0
+A0061,32,1118750,747,573500,0.25,Self-employed,Family,4,Medical,24,0
+A0062,36,1132500,764,597000,0.32,Contract,Rent,2,Debt consolidation,36,0
+A0063,40,1146250,781,620500,0.39,Business owner,Own,0,Home improvement,48,0
+A0064,44,1160000,528,644000,0.46,Salaried,Mortgage,0,Medical,60,1
+A0065,48,1173750,545,667500,0.53,Self-employed,Family,5,Debt consolidation,12,1
+A0066,52,1187500,562,691000,0.14,Contract,Rent,3,Home improvement,24,1
+A0067,56,1201250,579,714500,0.21,Business owner,Own,1,Medical,36,0
+A0068,60,1215000,596,738000,0.28,Salaried,Mortgage,6,Debt consolidation,48,1
+A0069,25,1228750,613,761500,0.35,Self-employed,Family,4,Home improvement,60,1
+A0070,29,1242500,630,785000,0.42,Contract,Rent,2,Medical,12,0
+A0071,33,1256250,647,808500,0.49,Business owner,Own,0,Debt consolidation,24,0
+A0072,37,1270000,664,832000,0.56,Salaried,Mortgage,5,Home improvement,36,1
+A0073,41,1283750,681,855500,0.17,Self-employed,Family,3,Medical,48,0
+A0074,45,1297500,698,879000,0.24,Contract,Rent,1,Debt consolidation,60,0
+A0075,49,1311250,715,902500,0.31,Business owner,Own,4,Home improvement,12,0
+A0076,53,1325000,732,926000,0.38,Salaried,Mortgage,2,Medical,24,0
+A0077,57,1338750,749,949500,0.45,Self-employed,Family,0,Debt consolidation,36,0
+A0078,22,1352500,766,973000,0.52,Contract,Rent,5,Home improvement,48,1
+A0079,26,1366250,783,76500,0.13,Business owner,Own,3,Medical,60,0
+A0080,30,1380000,530,100000,0.2,Salaried,Mortgage,3,Debt consolidation,12,1
+A0081,34,1393750,547,123500,0.27,Self-employed,Family,1,Home improvement,24,1
+A0082,38,1407500,564,147000,0.34,Contract,Rent,6,Medical,36,1
+A0083,42,1421250,581,170500,0.41,Business owner,Own,4,Debt consolidation,48,1
+A0084,46,1435000,598,194000,0.48,Salaried,Mortgage,2,Home improvement,60,1
+A0085,50,1448750,615,217500,0.55,Self-employed,Family,0,Medical,12,1
+A0086,54,1462500,632,241000,0.16,Contract,Rent,5,Debt consolidation,24,1
+A0087,58,1476250,649,264500,0.23,Business owner,Own,3,Home improvement,36,0
+A0088,23,1490000,666,288000,0.3,Salaried,Mortgage,1,Medical,48,0
+A0089,27,1503750,683,311500,0.37,Self-employed,Family,6,Debt consolidation,60,0
+A0090,31,1517500,700,335000,0.44,Contract,Rent,4,Home improvement,12,1
+A0091,35,1531250,717,358500,0.51,Business owner,Own,0,Medical,24,0
+A0092,39,1545000,734,382000,0.12,Salaried,Mortgage,5,Debt consolidation,36,0
+A0093,43,1558750,751,405500,0.19,Self-employed,Family,3,Home improvement,48,0
+A0094,47,1572500,768,429000,0.26,Contract,Rent,1,Medical,60,0
+A0095,51,1586250,785,452500,0.33,Business owner,Own,6,Debt consolidation,12,0
+A0096,55,1600000,532,476000,0.4,Salaried,Mortgage,6,Home improvement,24,1
+A0097,59,1613750,549,499500,0.47,Self-employed,Family,4,Medical,36,1
+A0098,24,1627500,566,523000,0.54,Contract,Rent,2,Debt consolidation,48,1
+A0099,28,1641250,583,546500,0.15,Business owner,Own,0,Home improvement,60,0
+A0100,32,1655000,600,570000,0.22,Salaried,Mortgage,5,Medical,12,1
+A0101,36,1668750,617,593500,0.29,Self-employed,Family,3,Debt consolidation,24,1
+A0102,40,1682500,634,617000,0.36,Contract,Rent,1,Home improvement,36,0
+A0103,44,1696250,651,640500,0.43,Business owner,Own,6,Medical,48,1
+A0104,48,290000,668,664000,0.5,Salaried,Mortgage,4,Debt consolidation,60,1
+A0105,52,303750,685,687500,0.57,Self-employed,Family,2,Home improvement,12,0
+A0106,56,317500,702,711000,0.18,Contract,Rent,5,Medical,24,1
+A0107,60,331250,719,734500,0.25,Business owner,Own,3,Debt consolidation,36,0
+A0108,25,345000,736,758000,0.32,Salaried,Mortgage,1,Home improvement,48,0
+A0109,29,358750,753,781500,0.39,Self-employed,Family,6,Medical,60,0
+A0110,33,372500,770,805000,0.46,Contract,Rent,4,Debt consolidation,12,1
+A0111,37,386250,787,828500,0.53,Business owner,Own,2,Home improvement,24,0
+A0112,41,400000,534,852000,0.14,Salaried,Mortgage,2,Medical,36,1
+A0113,45,413750,551,875500,0.21,Self-employed,Family,0,Debt consolidation,48,1
+A0114,49,427500,568,899000,0.28,Contract,Rent,5,Home improvement,60,1
+A0115,53,441250,585,922500,0.35,Business owner,Own,3,Medical,12,1
+A0116,57,455000,602,946000,0.42,Salaried,Mortgage,1,Debt consolidation,24,1
+A0117,22,468750,619,969500,0.49,Self-employed,Family,6,Home improvement,36,1
+A0118,26,482500,636,73000,0.56,Contract,Rent,4,Medical,48,1
+A0119,30,496250,653,96500,0.17,Business owner,Own,2,Debt consolidation,60,0
+A0120,34,510000,670,120000,0.24,Salaried,Mortgage,0,Home improvement,12,0
+A0121,38,523750,687,143500,0.31,Self-employed,Family,5,Medical,24,0
+A0122,42,537500,704,167000,0.38,Contract,Rent,1,Debt consolidation,36,0
+A0123,46,551250,721,190500,0.45,Business owner,Own,6,Home improvement,48,0
+A0124,50,565000,738,214000,0.52,Salaried,Mortgage,4,Medical,60,0
+A0125,54,578750,755,237500,0.13,Self-employed,Family,2,Debt consolidation,12,0
+A0126,58,592500,772,261000,0.2,Contract,Rent,0,Home improvement,24,0
+A0127,23,606250,789,284500,0.27,Business owner,Own,5,Medical,36,0
+A0128,27,620000,536,308000,0.34,Salaried,Mortgage,5,Debt consolidation,48,1
+A0129,31,633750,553,331500,0.41,Self-employed,Family,3,Home improvement,60,1
+A0130,35,647500,570,355000,0.48,Contract,Rent,1,Medical,12,1
+A0131,39,661250,587,378500,0.55,Business owner,Own,6,Debt consolidation,24,1
+A0132,43,675000,604,402000,0.16,Salaried,Mortgage,4,Home improvement,36,1
+A0133,47,688750,621,425500,0.23,Self-employed,Family,2,Medical,48,0
+A0134,51,702500,638,449000,0.3,Contract,Rent,0,Debt consolidation,60,0
+A0135,55,716250,655,472500,0.37,Business owner,Own,5,Home improvement,12,1
+A0136,59,730000,672,496000,0.44,Salaried,Mortgage,3,Medical,24,1
+A0137,24,743750,689,519500,0.51,Self-employed,Family,1,Debt consolidation,36,0
+A0138,28,757500,706,543000,0.12,Contract,Rent,4,Home improvement,48,1
+A0139,32,771250,723,566500,0.19,Business owner,Own,2,Medical,60,0
+A0140,36,785000,740,590000,0.26,Salaried,Mortgage,0,Debt consolidation,12,0
+A0141,40,798750,757,613500,0.33,Self-employed,Family,5,Home improvement,24,0
+A0142,44,812500,774,637000,0.4,Contract,Rent,3,Medical,36,1
+A0143,48,826250,521,660500,0.47,Business owner,Own,3,Debt consolidation,48,1
+A0144,52,840000,538,684000,0.54,Salaried,Mortgage,1,Home improvement,60,1
+A0145,56,853750,555,707500,0.15,Self-employed,Family,6,Medical,12,1
+A0146,60,867500,572,731000,0.22,Contract,Rent,4,Debt consolidation,24,1
+A0147,25,881250,589,754500,0.29,Business owner,Own,2,Home improvement,36,1
+A0148,29,895000,606,778000,0.36,Salaried,Mortgage,0,Medical,48,1
+A0149,33,908750,623,801500,0.43,Self-employed,Family,5,Debt consolidation,60,1
+A0150,37,922500,640,825000,0.5,Contract,Rent,3,Home improvement,12,1
+A0151,41,936250,657,848500,0.57,Business owner,Own,1,Medical,24,1
+A0152,45,950000,674,872000,0.18,Salaried,Mortgage,6,Debt consolidation,36,1
+A0153,49,963750,691,895500,0.25,Self-employed,Family,4,Home improvement,48,0
+A0154,53,977500,708,919000,0.32,Contract,Rent,0,Medical,60,0
+A0155,57,991250,725,942500,0.39,Business owner,Own,5,Debt consolidation,12,0
+A0156,22,1005000,742,966000,0.46,Salaried,Mortgage,3,Home improvement,24,1
+A0157,26,1018750,759,69500,0.53,Self-employed,Family,1,Medical,36,0
+A0158,30,1032500,776,93000,0.14,Contract,Rent,6,Debt consolidation,48,0
+A0159,34,1046250,523,116500,0.21,Business owner,Own,6,Home improvement,60,1
+A0160,38,1060000,540,140000,0.28,Salaried,Mortgage,4,Medical,12,1
+A0161,42,1073750,557,163500,0.35,Self-employed,Family,2,Debt consolidation,24,1
+A0162,46,1087500,574,187000,0.42,Contract,Rent,0,Home improvement,36,1
+A0163,50,1101250,591,210500,0.49,Business owner,Own,5,Medical,48,1
+A0164,54,1115000,608,234000,0.56,Salaried,Mortgage,3,Debt consolidation,60,1
+A0165,58,1128750,625,257500,0.17,Self-employed,Family,1,Home improvement,12,0
+A0166,23,1142500,642,281000,0.24,Contract,Rent,6,Medical,24,1
+A0167,27,1156250,659,304500,0.31,Business owner,Own,4,Debt consolidation,36,0
+A0168,31,1170000,676,328000,0.38,Salaried,Mortgage,2,Home improvement,48,0
+A0169,35,1183750,693,351500,0.45,Self-employed,Family,0,Medical,60,0
+A0170,39,1197500,710,375000,0.52,Contract,Rent,3,Debt consolidation,12,1
+A0171,43,1211250,727,398500,0.13,Business owner,Own,1,Home improvement,24,0
+A0172,47,1225000,744,422000,0.2,Salaried,Mortgage,6,Medical,36,0
+A0173,51,1238750,761,445500,0.27,Self-employed,Family,4,Debt consolidation,48,0
+A0174,55,1252500,778,469000,0.34,Contract,Rent,2,Home improvement,60,0
+A0175,59,1266250,525,492500,0.41,Business owner,Own,2,Medical,12,0
+A0176,24,1280000,542,516000,0.48,Salaried,Mortgage,0,Debt consolidation,24,1
+A0177,28,1293750,559,539500,0.55,Self-employed,Family,5,Home improvement,36,1
+A0178,32,1307500,576,563000,0.16,Contract,Rent,3,Medical,48,1
+A0179,36,1321250,593,586500,0.23,Business owner,Own,1,Debt consolidation,60,0
+A0180,40,1335000,610,610000,0.3,Salaried,Mortgage,6,Home improvement,12,0

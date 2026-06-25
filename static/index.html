@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Automate AutoML Studio</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell studio-shell">
+      <aside class="sidebar studio-sidebar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <div>
+            <strong>Automate Studio</strong>
+            <small>AutoML workspace</small>
+          </div>
+        </div>
+
+        <nav class="studio-nav">
+          <button class="nav-item active" data-view="data"><span>DS</span>Datasets</button>
+          <button class="nav-item" data-view="dashboard"><span>VZ</span>Visualize</button>
+          <button class="nav-item" data-view="model"><span>TR</span>Training</button>
+          <button class="nav-item" data-view="registry"><span>EV</span>Evaluate</button>
+          <button class="nav-item" data-view="api"><span>DP</span>Deploy</button>
+        </nav>
+
+        <div id="sidebarPulse" class="sidebar-pulse" aria-label="Workspace pulse">
+          <div class="pulse-item idle"><span>Dataset</span><strong>Waiting</strong></div>
+          <div class="pulse-item idle"><span>Models</span><strong>0</strong></div>
+          <div class="pulse-item idle"><span>Deploy</span><strong>Not ready</strong></div>
+        </div>
+
+        <button class="sidebar-label sidebar-toggle" type="button" data-sidebar-target="sidebarDataPanel">
+          <span>Data</span>
+          <b>Hide</b>
+        </button>
+        <div id="sidebarDataPanel" class="sidebar-links">
+          <span id="sampleCount">Loading samples</span>
+          <span id="workspaceStatus">No active dataset</span>
+          <span>Data prep ready</span>
+        </div>
+
+        <button class="sidebar-label sidebar-toggle" type="button" data-sidebar-target="sidebarExperimentsPanel">
+          <span>Experiments</span>
+          <b>Hide</b>
+        </button>
+        <div id="sidebarExperimentsPanel" class="sidebar-links">
+          <span id="modelCount">Loading models</span>
+          <span>Leaderboards</span>
+          <span>Model reports</span>
+        </div>
+
+        <div class="sidebar-spacer"></div>
+        <div class="sidebar-note">
+          <strong>Active target</strong>
+          <code id="activeTargetNote">Choose a dataset</code>
+        </div>
+      </aside>
+
+      <main class="content studio-content">
+        <header class="topbar studio-topbar">
+          <div class="project-picker">
+            <span class="project-icon">PX</span>
+            <div>
+              <small>Project</small>
+              <strong>Automate Customer Model</strong>
+            </div>
+          </div>
+          <div class="top-actions">
+            <button id="quickDashboard" type="button" class="icon-button" title="Open dashboard">S</button>
+            <button id="quickTrain" type="button" class="icon-button" title="Open model studio">ML</button>
+            <button id="downloadProject" type="button" class="ghost-button">Save project</button>
+            <div id="status" class="status">No dataset loaded</div>
+          </div>
+        </header>
+
+        <section class="workflow studio-stepper" aria-label="AutoML workflow">
+          <button class="workflow-step active" type="button" data-go-view="data">
+            <span>1</span>
+            <strong>Data</strong>
+            <small>In progress</small>
+          </button>
+          <button class="workflow-step" type="button" data-go-view="data">
+            <span>2</span>
+            <strong>Prepare</strong>
+            <small>Schema ready</small>
+          </button>
+          <button class="workflow-step" type="button" data-go-view="dashboard">
+            <span>3</span>
+            <strong>Visualize</strong>
+            <small>Explore KPIs</small>
+          </button>
+          <button class="workflow-step" type="button" data-go-view="model">
+            <span>4</span>
+            <strong>Train</strong>
+            <small>Compare models</small>
+          </button>
+          <button class="workflow-step" type="button" data-go-view="registry">
+            <span>5</span>
+            <strong>Evaluate</strong>
+            <small>Review quality</small>
+          </button>
+          <button class="workflow-step" type="button" data-go-view="api">
+            <span>6</span>
+            <strong>Deploy</strong>
+            <small>Prediction API</small>
+          </button>
+        </section>
+
+        <section id="data" class="view active">
+          <div class="studio-page-heading">
+            <div>
+              <h1>Bring data into the workspace</h1>
+              <p class="muted">Upload CSV files, load sample datasets, or connect SQLite data sources for profiling and modeling.</p>
+            </div>
+          </div>
+
+          <section class="data-workspace">
+            <div class="source-column">
+              <div id="sampleDatasetRail" class="dataset-rail empty-state">Loading sample CSVs.</div>
+            </div>
+
+            <section class="upload-stage">
+              <form id="uploadForm" class="form-stack upload-form">
+                <label id="dropZone" class="file-drop studio-drop" for="csvFile">
+                  <strong>Upload dataset</strong>
+                  <span>Drag a sample card here, drop a CSV, or browse from your computer</span>
+                  <em id="selectedFileName">No file selected</em>
+                  <b>Browse files</b>
+                  <small>CSV upload and SQLite loading are supported.</small>
+                  <input id="csvFile" type="file" accept=".csv" />
+                </label>
+                <button id="uploadNowButton" class="drop-submit" type="submit">Upload and profile</button>
+              </form>
+            </section>
+
+            <aside class="right-rail data-rail">
+              <section class="rail-card">
+                <h2>Dataset requirements</h2>
+                <ul class="check-list">
+                  <li>Tabular data only</li>
+                  <li>Header row with column names</li>
+                  <li>Target column selected later</li>
+                  <li>Numeric, categorical, boolean, date</li>
+                </ul>
+              </section>
+              <section class="rail-card">
+                <h2>Accepted formats</h2>
+                <div class="format-list">
+                  <span>CSV</span>
+                  <span>XLSX</span>
+                  <span>JSON</span>
+                  <span>Parquet</span>
+                </div>
+                <p class="muted">CSV is live in this project. Other cards mirror the studio flow.</p>
+              </section>
+              <section class="rail-card">
+                <h2>Sample library</h2>
+                <div id="sampleInsightList" class="detail-list"></div>
+              </section>
+            </aside>
+          </section>
+
+          <section class="panel full workspace-actions">
+            <div class="workspace-copy">
+              <div class="panel-kicker">Active workspace</div>
+              <h2 id="workspaceTitle">No dataset loaded</h2>
+              <p id="workspaceSubtitle" class="muted">Load a sample or upload a CSV to unlock profiling, visualization, training, and prediction actions.</p>
+              <div class="workspace-action-row">
+                <button id="workspaceDashboard" class="ghost-button" type="button" data-requires-dataset>Visualize</button>
+                <button id="workspaceTrain" class="ghost-button" type="button" data-requires-dataset>Train model</button>
+                <button id="workspaceExport" class="ghost-button" type="button">Save project</button>
+              </div>
+            </div>
+            <div class="workspace-live">
+              <div id="workspaceStats" class="workspace-stat-grid empty-state">Dataset metrics will appear after loading data.</div>
+              <div id="workspaceQuality" class="quality-grid empty-state">Automated quality checks will appear here.</div>
+              <div id="cleaningAssistant" class="cleaning-assistant empty-state">Cleaning plan will appear after loading data.</div>
+            </div>
+          </section>
+
+          <section class="panel full sqlite-strip">
+            <div>
+              <div class="panel-kicker">Database source</div>
+              <h2>Connect SQLite</h2>
+            </div>
+            <form id="sqliteForm" class="sqlite-row">
+              <input id="dbPath" type="text" placeholder="C:\path\database.db" />
+              <input id="tableName" type="text" placeholder="table_name" />
+              <button type="submit">Load table</button>
+            </form>
+          </section>
+
+          <section class="prepare-layout">
+            <section class="panel">
+              <div class="panel-heading">
+                <div>
+                  <div class="panel-kicker">Detected schema</div>
+                  <h2>Column Profile</h2>
+                </div>
+                <button id="refreshDashboard" type="button">Suggest dashboard</button>
+              </div>
+              <div id="profileSummary" class="summary-row empty-state">Upload a CSV to see dataset summary cards.</div>
+              <div id="profileTable" class="table-wrap empty-state">Column details will appear here.</div>
+            </section>
+            <section class="panel">
+              <div class="panel-heading">
+                <div>
+                  <div class="panel-kicker">Rows preview</div>
+                  <h2>Data Preview</h2>
+                </div>
+              </div>
+              <div id="dataPreview" class="table-wrap empty-state">Select or upload a dataset to preview rows.</div>
+            </section>
+          </section>
+        </section>
+
+        <section id="dashboard" class="view">
+          <div class="page-title-row studio-page-heading">
+            <div>
+              <h1 id="dashboardTitle">Data Visualization</h1>
+              <p id="dashboardSubtitle" class="muted">Select or load a dataset to generate live KPIs and charts.</p>
+            </div>
+            <div class="dashboard-controls">
+              <select id="dashboardDatasetSelect"></select>
+              <button id="clearDashboardFilters" class="ghost-button" type="button">Clear filters</button>
+              <button id="loadDashboard" type="button">Refresh</button>
+            </div>
+          </div>
+
+          <section id="studioOverview" class="studio-overview empty-state">
+            Load data to build a live studio overview.
+          </section>
+
+          <section id="overviewActionStrip" class="overview-action-strip empty-state">
+            Smart actions will appear after the workspace has context.
+          </section>
+
+          <section class="dashboard-layout">
+            <div class="dashboard-main">
+              <div id="kpiGrid" class="kpi-grid"></div>
+              <div id="chartList" class="chart-grid"></div>
+              <div class="panel dashboard-footer">
+                <span><i class="live-dot"></i>Visuals are based on the active dataset and filters.</span>
+                <span>Auto-refresh ready</span>
+              </div>
+            </div>
+            <aside class="insights-rail right-rail">
+              <section class="rail-card">
+                <h2>Key findings</h2>
+                <div id="summaryList" class="summary-list"></div>
+              </section>
+              <section class="rail-card filter-panel">
+                <h2>Quick filters</h2>
+                <div id="filterList" class="filter-list"></div>
+              </section>
+            </aside>
+          </section>
+        </section>
+
+        <section id="model" class="view">
+          <div class="page-title-row studio-page-heading">
+            <div>
+              <h1>Train and compare candidate models</h1>
+              <p class="muted">Choose a target, inspect recommendations, train candidates, and review validation results.</p>
+            </div>
+            <div class="dashboard-controls">
+              <select id="modelDatasetSelect"></select>
+              <button id="refreshModelContext" class="ghost-button" type="button">Refresh</button>
+            </div>
+          </div>
+
+          <section class="train-config-row">
+            <article class="panel config-tile">
+              <span>Problem type</span>
+              <strong id="problemTypeLabel">Auto detect</strong>
+            </article>
+            <article class="panel config-tile">
+              <span>Target</span>
+              <strong id="targetColumnLabel">Select target</strong>
+            </article>
+            <article class="panel config-tile">
+              <span>Validation</span>
+              <strong>Stratified K-Fold</strong>
+            </article>
+            <article class="panel config-tile">
+              <span>Metric</span>
+              <strong id="primaryMetricLabel">Auto</strong>
+            </article>
+          </section>
+
+          <section class="model-studio-grid">
+            <div id="modelSuggestions" class="model-suggestions empty-state">Load a dataset to get model recommendations.</div>
+
+            <section class="panel train-panel">
+              <form id="trainForm" class="train-row">
+                <label>Problem Type
+                  <select id="problemType">
+                    <option value="auto">Auto detect</option>
+                    <option value="classification">Classification</option>
+                    <option value="regression">Regression</option>
+                  </select>
+                </label>
+                <label>Target Column
+                  <select id="targetColumn"></select>
+                </label>
+                <button id="suggestModelsButton" type="button">Suggest models</button>
+                <button type="submit">Train all models</button>
+                <button id="accuracyBoosterButton" class="ghost-button" type="button">Improve accuracy</button>
+              </form>
+              <div class="feature-selector">
+                <div class="feature-selector-head">
+                  <div>
+                    <div class="panel-kicker">Feature selection</div>
+                    <h3>Training columns</h3>
+                  </div>
+                  <div class="feature-actions">
+                    <button id="selectAllFeatures" class="ghost-button" type="button">Select all</button>
+                    <button id="clearIdFeatures" class="ghost-button" type="button">Remove ID columns</button>
+                  </div>
+                </div>
+                <div id="featureSelectionSummary" class="muted">Load a dataset to choose training columns.</div>
+                <div id="featureColumnList" class="feature-list empty-state">Feature columns will appear here.</div>
+              </div>
+            </section>
+          </section>
+
+          <section class="training-layout">
+            <div class="training-main">
+              <section class="panel pipeline-panel">
+                <div class="panel-kicker">Training pipeline</div>
+                <div class="training-pipeline">
+                  <div class="pipe-node done"><span></span><strong>Data prepared</strong><small>Profile complete</small></div>
+                  <div class="pipe-node done"><span></span><strong>Feature engineering</strong><small>Preprocessing ready</small></div>
+                  <div class="pipe-node active"><span></span><strong>Model search</strong><small>Train candidates</small></div>
+                  <div class="pipe-node"><span></span><strong>Validation</strong><small>Holdout checks</small></div>
+                </div>
+              </section>
+
+              <section class="panel">
+                <div class="panel-kicker">Model comparison</div>
+                <h2>Model Leaderboard</h2>
+                <div id="trainingSummary" class="train-summary empty-state">Train a model to see split, target, and feature details.</div>
+                <div id="leaderboard" class="table-wrap"></div>
+              </section>
+            </div>
+
+            <aside class="right-rail training-monitor">
+              <section class="rail-card">
+                <h2>Training monitor</h2>
+                <div class="monitor-list">
+                  <span><b>Elapsed</b>Live after training</span>
+                  <span><b>CPU</b>Ready</span>
+                  <span><b>Memory</b>Available</span>
+                </div>
+              </section>
+              <section class="rail-card">
+                <h2>Explainability Studio</h2>
+                <div id="explainability" class="importance-list"></div>
+              </section>
+            </aside>
+          </section>
+
+          <section class="panel full">
+            <div class="panel-kicker">Validation diagnostics</div>
+            <h2>Holdout Results</h2>
+            <div id="modelDiagnostics" class="diagnostic-grid empty-state">Diagnostics will appear after training.</div>
+          </section>
+
+          <section id="thresholdPanel" class="panel full threshold-panel empty-state">
+            Threshold tuning will appear for binary classifiers with probability output.
+          </section>
+
+          <section class="api-registry-grid">
+            <section class="panel">
+              <div class="panel-kicker">Production handoff</div>
+              <h2>Prediction API</h2>
+              <p class="muted">Use the REST API to generate predictions from your trained models.</p>
+              <div id="apiBox" class="api-box">Train a model to create a prediction endpoint.</div>
+              <textarea id="predictPayload" rows="7" spellcheck="false"></textarea>
+              <button id="predictButton" type="button">Run prediction</button>
+              <div class="batch-predictor">
+                <div>
+                  <div class="panel-kicker">Batch scoring</div>
+                  <h3>CSV predictions</h3>
+                </div>
+                <label class="batch-upload" for="batchPredictFile">
+                  <span id="batchPredictFileName">No batch CSV selected</span>
+                  <b>Choose CSV</b>
+                  <input id="batchPredictFile" type="file" accept=".csv" />
+                </label>
+                <button id="batchPredictButton" class="ghost-button" type="button">Download predictions</button>
+              </div>
+            </section>
+
+            <section class="panel registry-preview">
+              <div class="panel-heading">
+                <div>
+                  <div class="panel-kicker">Saved models</div>
+                  <h2>Model Registry</h2>
+                </div>
+                <button class="ghost-button" type="button" data-go-view="registry">Open registry</button>
+              </div>
+              <div id="modelRegistryPreview" class="table-wrap empty-state">Train a model to add it to the registry.</div>
+            </section>
+          </section>
+        </section>
+
+        <section id="registry" class="view">
+          <section class="panel full registry-hero evaluation-hero">
+            <div>
+              <div class="panel-kicker">Deployment and monitoring readiness</div>
+              <h1>Evaluate the best model</h1>
+              <p class="muted">Review trained models, target metrics, feature impact, and prediction endpoints.</p>
+            </div>
+            <div class="registry-actions">
+              <button id="exportModelReport" class="ghost-button" type="button">Export report</button>
+              <button id="refreshModels" type="button">Refresh registry</button>
+            </div>
+          </section>
+
+          <section class="registry-grid">
+            <div class="panel registry-summary">
+              <div class="panel-kicker">Inventory</div>
+              <div id="registryStats" class="summary-row compact empty-state">Train a model to build registry stats.</div>
+            </div>
+            <div class="panel registry-summary">
+              <div class="panel-kicker">Best API</div>
+              <div id="registryApiCard" class="api-box">No model endpoint yet.</div>
+            </div>
+            <div class="panel registry-summary trust-summary">
+              <div class="panel-kicker">Model trust</div>
+              <div id="modelTrustScore" class="trust-score empty-state">Train a model to calculate risk.</div>
+            </div>
+          </section>
+
+          <section class="panel full export-center">
+            <div class="panel-heading">
+              <div>
+                <div class="panel-kicker">Export center</div>
+                <h2>Download Project Assets</h2>
+                <p class="muted">Export model files, reports, experiment history, leaderboard metrics, and explainability summaries.</p>
+              </div>
+              <select id="exportModelSelect"></select>
+            </div>
+            <div id="exportCenterBody" class="export-grid empty-state">Train a model to unlock exports.</div>
+          </section>
+
+          <section class="panel full">
+            <div class="panel-heading">
+              <div>
+                <div class="panel-kicker">Experiment history</div>
+                <h2>Saved Training Runs</h2>
+                <p class="muted">Compare score deltas, best runs, and saved model snapshots across experiments.</p>
+              </div>
+            </div>
+            <div id="experimentComparison" class="experiment-grid empty-state">Train models to compare experiments.</div>
+          </section>
+
+          <section class="panel full">
+            <div class="panel-heading">
+              <div>
+                <div class="panel-kicker">Model operations</div>
+                <h2>Registered Models</h2>
+              </div>
+            </div>
+            <div id="modelRegistry" class="table-wrap empty-state">Train a model to add it to the registry.</div>
+          </section>
+        </section>
+
+        <section id="api" class="view">
+          <section class="panel full deploy-hero">
+            <div class="panel-kicker">Production handoff</div>
+            <h1>Deploy prediction API</h1>
+            <p class="muted">Test saved models with editable what-if inputs, inspect request JSON, and review confidence before using the API.</p>
+          </section>
+
+          <section class="deploy-command-bar" aria-label="Deploy command bar">
+            <div class="deploy-command-main">
+              <span>Selected model</span>
+              <strong id="deployCommandModel">No saved model selected</strong>
+              <small id="deployCommandMeta">Train or select a model to unlock deployment actions.</small>
+            </div>
+            <div class="deploy-command-metrics">
+              <span id="deployCommandRole" class="deploy-command-badge">Not selected</span>
+              <span><b id="deployCommandHealth">--</b> Health</span>
+              <span><b id="deployCommandAlerts">--</b> Alerts</span>
+            </div>
+            <div class="deploy-command-actions">
+              <button id="commandRunDrift" class="ghost-button" type="button">Run drift</button>
+              <button id="commandPromote" class="ghost-button" type="button">Promote</button>
+              <button id="commandDocs" type="button">Docs</button>
+            </div>
+          </section>
+
+          <nav class="deploy-tabs" aria-label="Deploy sections">
+            <button class="active" type="button" data-deploy-tab="playground">Playground</button>
+            <button type="button" data-deploy-tab="drift">Drift</button>
+            <button type="button" data-deploy-tab="monitoring">Monitoring</button>
+            <button type="button" data-deploy-tab="promotion">Promotion</button>
+            <button type="button" data-deploy-tab="docs">API Docs</button>
+            <button type="button" data-deploy-tab="readiness">Readiness</button>
+            <button type="button" data-deploy-tab="results">Results</button>
+            <button type="button" data-deploy-tab="audit">Audit</button>
+          </nav>
+
+          <section class="deploy-workbench" data-deploy-panel="playground">
+            <section class="panel what-if-panel">
+              <div class="panel-heading">
+                <div>
+                  <div class="panel-kicker">What-if simulator</div>
+                  <h2>Change Inputs Live</h2>
+                </div>
+                <select id="playgroundModelSelect"></select>
+              </div>
+              <div id="whatIfSummary" class="summary-row compact empty-state">Train a model to unlock the simulator.</div>
+              <div id="whatIfFields" class="what-if-fields empty-state">Feature controls will appear here.</div>
+              <div class="what-if-actions">
+                <button id="useSampleScenario" class="ghost-button" type="button">Use sample row</button>
+                <button id="resetWhatIfInputs" class="ghost-button" type="button">Reset values</button>
+              </div>
+            </section>
+
+            <section class="panel api-playground-panel">
+              <div class="panel-heading">
+                <div>
+                  <div class="panel-kicker">API playground</div>
+                  <h2>Request Preview</h2>
+                </div>
+              </div>
+              <div id="playgroundApiBox" class="api-box">Select a saved model to build an API request.</div>
+              <div id="playgroundThresholdPanel" class="playground-threshold empty-state">Threshold controls appear for supported classifiers.</div>
+              <textarea id="playgroundPayload" rows="12" spellcheck="false"></textarea>
+              <button id="runPlaygroundPrediction" type="button">Run what-if prediction</button>
+              <div id="apiPlaygroundNotes" class="deploy-notes empty-state">Model actions and API notes will appear here.</div>
+            </section>
+          </section>
+
+          <section class="panel full drift-monitor-panel" data-deploy-panel="drift">
+            <div class="panel-heading">
+              <div>
+                <div class="panel-kicker">Dataset drift</div>
+                <h2>Compare Scoring Data</h2>
+              </div>
+              <div class="drift-controls">
+                <select id="driftDatasetSelect"></select>
+                <button id="runDriftCheck" class="ghost-button" type="button">Run drift check</button>
+              </div>
+            </div>
+            <div id="datasetDriftMonitor" class="dataset-drift empty-state">Select a saved model and comparison dataset to check drift.</div>
+          </section>
+
+          <section class="panel full model-monitoring-panel" data-deploy-panel="monitoring">
+            <div class="panel-heading">
+              <div>
+                <div class="panel-kicker">Model monitoring</div>
+                <h2>Production Health</h2>
+              </div>
+              <button id="refreshMonitoring" class="ghost-button" type="button">Refresh monitor</button>
+            </div>
+            <div id="modelMonitoringDashboard" class="monitoring-dashboard empty-state">Select a saved model to load monitoring signals.</div>
+          </section>
+
+          <section class="panel full monitoring-ops-panel" data-deploy-panel="monitoring">
+            <div class="panel-heading">
+              <div>
+                <div class="panel-kicker">Monitoring history</div>
+                <h2>Trends and Alerts</h2>
+              </div>
+              <button id="refreshMonitoringOps" class="ghost-button" type="button">Refresh alerts</button>
+            </div>
+            <div class="monitoring-ops-grid">
+              <div id="monitoringHistoryCharts" class="monitoring-history empty-state">Monitoring trend charts appear after the first health snapshot.</div>
+              <div id="alertCenter" class="alert-center empty-state">Active alerts appear here.</div>
+            </div>
+          </section>
+
+          <section class="panel full champion-panel" data-deploy-panel="promotion">
+            <div class="panel-heading">
+              <div>
+                <div class="panel-kicker">Champion and challenger</div>
+                <h2>Model Promotion Board</h2>
+              </div>
+              <div class="champion-actions">
+                <button id="refreshChampionBoard" class="ghost-button" type="button">Refresh board</button>
+                <button id="promoteToProduction" class="ghost-button" type="button">Promote to production</button>
+                <button id="retrainFromDrift" type="button">Retrain from drift</button>
+              </div>
+            </div>
+            <div id="championChallengerBoard" class="champion-board empty-state">Select a saved model to compare champion and challenger runs.</div>
+          </section>
+
+          <section class="panel full api-docs-panel" data-deploy-panel="docs">
+            <div class="panel-heading">
+              <div>
+                <div class="panel-kicker">API documentation</div>
+                <h2>Selected Model Contract</h2>
+              </div>
+              <button id="refreshApiDocs" class="ghost-button" type="button">Refresh docs</button>
+            </div>
+            <div id="modelApiDocs" class="api-docs empty-state">Select a saved model to generate API documentation.</div>
+          </section>
+
+          <section class="panel full deployment-readiness-panel" data-deploy-panel="readiness">
+            <div class="panel-heading">
+              <div>
+                <div class="panel-kicker">Deployment readiness</div>
+                <h2>Release Checklist</h2>
+              </div>
+              <button id="refreshReadiness" class="ghost-button" type="button">Refresh checklist</button>
+            </div>
+            <div id="deploymentReadinessChecklist" class="deployment-readiness empty-state">Select a saved model to calculate readiness.</div>
+          </section>
+
+          <section class="panel full deploy-results" data-deploy-panel="results">
+            <div class="panel-heading">
+              <div>
+                <div class="panel-kicker">Prediction result</div>
+                <h2>Confidence Dashboard</h2>
+              </div>
+            </div>
+            <div id="predictionConfidenceDashboard" class="prediction-confidence empty-state">Run a prediction to review confidence.</div>
+            <details class="raw-prediction">
+              <summary>Raw API response</summary>
+              <pre id="predictionOutput"></pre>
+            </details>
+          </section>
+
+          <section class="panel full prediction-audit-panel" data-deploy-panel="audit">
+            <div class="panel-heading">
+              <div>
+                <div class="panel-kicker">Prediction audit</div>
+                <h2>Recent Prediction Tests</h2>
+              </div>
+              <button id="refreshAuditLog" class="ghost-button" type="button">Refresh log</button>
+            </div>
+            <div id="predictionAuditLog" class="prediction-audit-log empty-state">Run a prediction to build the audit log.</div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <div id="modelDrawerBackdrop" class="drawer-backdrop" hidden></div>
+    <aside id="modelDetailDrawer" class="model-drawer" aria-hidden="true" aria-label="Model detail drawer">
+      <div class="drawer-head">
+        <div>
+          <span>Model detail</span>
+          <h2 id="modelDrawerTitle">Select a model</h2>
+          <p id="modelDrawerSubtitle">Inspect metrics, risk, features, and deployment handoff.</p>
+        </div>
+        <button id="closeModelDrawer" class="ghost-button" type="button">Close</button>
+      </div>
+      <div id="modelDetailBody" class="model-detail-body empty-state">Choose Inspect from the registry.</div>
+      <div class="drawer-actions">
+        <button id="drawerDeployModel" type="button">Open in Deploy</button>
+        <button id="drawerCloseModel" class="ghost-button" type="button">Done</button>
+      </div>
+    </aside>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

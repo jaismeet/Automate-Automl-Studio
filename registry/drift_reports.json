@@ -1,0 +1,936 @@
+[
+  {
+    "available": true,
+    "model_id": "fc76c659a8044b7fab4cbf5eb54b0d59",
+    "reference_dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "reference_dataset_name": "customer_churn.csv",
+    "comparison_dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "comparison_dataset_name": "customer_churn.csv",
+    "target_column": "churn",
+    "status": "low",
+    "score": 100,
+    "summary": "Low drift: customer_churn.csv is close to the training data.",
+    "feature_count": 13,
+    "compared_feature_count": 13,
+    "missing_required_columns": [],
+    "extra_columns": [],
+    "row_counts": {
+      "reference": 180,
+      "comparison": 180
+    },
+    "column_counts": {
+      "reference": 14,
+      "comparison": 14,
+      "required_features": 13,
+      "compared_features": 13
+    },
+    "checks": [
+      {
+        "status": "pass",
+        "label": "Schema compatibility",
+        "detail": "All required model feature columns are present.",
+        "action": "Continue with distribution checks."
+      },
+      {
+        "status": "pass",
+        "label": "Row volume",
+        "detail": "Compared 180 row(s) against 180 training row(s).",
+        "action": "Sample size is sufficient for a quick drift screen."
+      },
+      {
+        "status": "pass",
+        "label": "Missing values",
+        "detail": "0 high and 0 medium missing-rate shift(s) detected.",
+        "action": "Missing-value patterns are stable."
+      },
+      {
+        "status": "pass",
+        "label": "Numeric distribution",
+        "detail": "0 high and 0 medium numeric mean shift(s) detected.",
+        "action": "Numeric feature averages are stable."
+      },
+      {
+        "status": "pass",
+        "label": "Category distribution",
+        "detail": "0 high and 0 medium category shift(s) detected.",
+        "action": "Categorical feature mix is stable."
+      },
+      {
+        "status": "pass",
+        "label": "Unseen categories",
+        "detail": "0 feature(s) contain notable unseen category share.",
+        "action": "No notable unseen-category pressure detected."
+      }
+    ],
+    "missing_drift": [
+      {
+        "column": "customer_id",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "age",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "tenure_months",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "city",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "plan",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "contract_type",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "internet_service",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "monthly_charges",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      }
+    ],
+    "numeric_drift": [
+      {
+        "column": "age",
+        "reference_mean": 40.9889,
+        "comparison_mean": 40.9889,
+        "reference_std": 12.407,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "tenure_months",
+        "reference_mean": 29.5,
+        "comparison_mean": 29.5,
+        "reference_std": 17.2603,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "monthly_charges",
+        "reference_mean": 1284.0833,
+        "comparison_mean": 1284.0833,
+        "reference_std": 530.4238,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "total_charges",
+        "reference_mean": 37255.0833,
+        "comparison_mean": 37255.0833,
+        "reference_std": 26837.5723,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "support_tickets",
+        "reference_mean": 4,
+        "comparison_mean": 4,
+        "reference_std": 2.6458,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "satisfaction_score",
+        "reference_mean": 6.75,
+        "comparison_mean": 6.75,
+        "reference_std": 2.5207,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "last_login_days",
+        "reference_mean": 37.1667,
+        "comparison_mean": 37.1667,
+        "reference_std": 21.5787,
+        "mean_shift": 0,
+        "severity": "low"
+      }
+    ],
+    "categorical_drift": [
+      {
+        "column": "customer_id",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "C0001",
+        "comparison_top": "C0001",
+        "severity": "low"
+      },
+      {
+        "column": "city",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Bangalore",
+        "comparison_top": "Bangalore",
+        "severity": "low"
+      },
+      {
+        "column": "plan",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Basic",
+        "comparison_top": "Basic",
+        "severity": "low"
+      },
+      {
+        "column": "contract_type",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Annual",
+        "comparison_top": "Annual",
+        "severity": "low"
+      },
+      {
+        "column": "internet_service",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Mobile",
+        "comparison_top": "Mobile",
+        "severity": "low"
+      },
+      {
+        "column": "payment_method",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "UPI",
+        "comparison_top": "UPI",
+        "severity": "low"
+      }
+    ],
+    "actions": [
+      "Keep this comparison as the baseline for recurring drift monitoring."
+    ],
+    "drift_id": "ba53aaa131354a9289e956948e033697",
+    "created_at": "2026-06-24T09:40:56Z"
+  },
+  {
+    "available": true,
+    "model_id": "fc76c659a8044b7fab4cbf5eb54b0d59",
+    "reference_dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "reference_dataset_name": "customer_churn.csv",
+    "comparison_dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "comparison_dataset_name": "customer_churn.csv",
+    "target_column": "churn",
+    "status": "low",
+    "score": 100,
+    "summary": "Low drift: customer_churn.csv is close to the training data.",
+    "feature_count": 13,
+    "compared_feature_count": 13,
+    "missing_required_columns": [],
+    "extra_columns": [],
+    "row_counts": {
+      "reference": 180,
+      "comparison": 180
+    },
+    "column_counts": {
+      "reference": 14,
+      "comparison": 14,
+      "required_features": 13,
+      "compared_features": 13
+    },
+    "checks": [
+      {
+        "status": "pass",
+        "label": "Schema compatibility",
+        "detail": "All required model feature columns are present.",
+        "action": "Continue with distribution checks."
+      },
+      {
+        "status": "pass",
+        "label": "Row volume",
+        "detail": "Compared 180 row(s) against 180 training row(s).",
+        "action": "Sample size is sufficient for a quick drift screen."
+      },
+      {
+        "status": "pass",
+        "label": "Missing values",
+        "detail": "0 high and 0 medium missing-rate shift(s) detected.",
+        "action": "Missing-value patterns are stable."
+      },
+      {
+        "status": "pass",
+        "label": "Numeric distribution",
+        "detail": "0 high and 0 medium numeric mean shift(s) detected.",
+        "action": "Numeric feature averages are stable."
+      },
+      {
+        "status": "pass",
+        "label": "Category distribution",
+        "detail": "0 high and 0 medium category shift(s) detected.",
+        "action": "Categorical feature mix is stable."
+      },
+      {
+        "status": "pass",
+        "label": "Unseen categories",
+        "detail": "0 feature(s) contain notable unseen category share.",
+        "action": "No notable unseen-category pressure detected."
+      }
+    ],
+    "missing_drift": [
+      {
+        "column": "customer_id",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "age",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "tenure_months",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "city",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "plan",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "contract_type",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "internet_service",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "monthly_charges",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      }
+    ],
+    "numeric_drift": [
+      {
+        "column": "age",
+        "reference_mean": 40.9889,
+        "comparison_mean": 40.9889,
+        "reference_std": 12.407,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "tenure_months",
+        "reference_mean": 29.5,
+        "comparison_mean": 29.5,
+        "reference_std": 17.2603,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "monthly_charges",
+        "reference_mean": 1284.0833,
+        "comparison_mean": 1284.0833,
+        "reference_std": 530.4238,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "total_charges",
+        "reference_mean": 37255.0833,
+        "comparison_mean": 37255.0833,
+        "reference_std": 26837.5723,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "support_tickets",
+        "reference_mean": 4,
+        "comparison_mean": 4,
+        "reference_std": 2.6458,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "satisfaction_score",
+        "reference_mean": 6.75,
+        "comparison_mean": 6.75,
+        "reference_std": 2.5207,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "last_login_days",
+        "reference_mean": 37.1667,
+        "comparison_mean": 37.1667,
+        "reference_std": 21.5787,
+        "mean_shift": 0,
+        "severity": "low"
+      }
+    ],
+    "categorical_drift": [
+      {
+        "column": "customer_id",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "C0001",
+        "comparison_top": "C0001",
+        "severity": "low"
+      },
+      {
+        "column": "city",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Bangalore",
+        "comparison_top": "Bangalore",
+        "severity": "low"
+      },
+      {
+        "column": "plan",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Basic",
+        "comparison_top": "Basic",
+        "severity": "low"
+      },
+      {
+        "column": "contract_type",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Annual",
+        "comparison_top": "Annual",
+        "severity": "low"
+      },
+      {
+        "column": "internet_service",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Mobile",
+        "comparison_top": "Mobile",
+        "severity": "low"
+      },
+      {
+        "column": "payment_method",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "UPI",
+        "comparison_top": "UPI",
+        "severity": "low"
+      }
+    ],
+    "actions": [
+      "Keep this comparison as the baseline for recurring drift monitoring."
+    ],
+    "drift_id": "d8ea66ffbbfd4085aeddb8334e4db6b1",
+    "created_at": "2026-06-24T09:40:24Z"
+  },
+  {
+    "available": true,
+    "model_id": "fc76c659a8044b7fab4cbf5eb54b0d59",
+    "reference_dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "reference_dataset_name": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "comparison_dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "comparison_dataset_name": "customer_churn.csv",
+    "target_column": "churn",
+    "status": "low",
+    "score": 100,
+    "summary": "Low drift: customer_churn.csv is close to the training data.",
+    "feature_count": 13,
+    "compared_feature_count": 13,
+    "missing_required_columns": [],
+    "extra_columns": [],
+    "row_counts": {
+      "reference": 180,
+      "comparison": 180
+    },
+    "column_counts": {
+      "reference": 14,
+      "comparison": 14,
+      "required_features": 13,
+      "compared_features": 13
+    },
+    "checks": [
+      {
+        "status": "pass",
+        "label": "Schema compatibility",
+        "detail": "All required model feature columns are present.",
+        "action": "Continue with distribution checks."
+      },
+      {
+        "status": "pass",
+        "label": "Row volume",
+        "detail": "Compared 180 row(s) against 180 training row(s).",
+        "action": "Sample size is sufficient for a quick drift screen."
+      },
+      {
+        "status": "pass",
+        "label": "Missing values",
+        "detail": "0 high and 0 medium missing-rate shift(s) detected.",
+        "action": "Missing-value patterns are stable."
+      },
+      {
+        "status": "pass",
+        "label": "Numeric distribution",
+        "detail": "0 high and 0 medium numeric mean shift(s) detected.",
+        "action": "Numeric feature averages are stable."
+      },
+      {
+        "status": "pass",
+        "label": "Category distribution",
+        "detail": "0 high and 0 medium category shift(s) detected.",
+        "action": "Categorical feature mix is stable."
+      },
+      {
+        "status": "pass",
+        "label": "Unseen categories",
+        "detail": "0 feature(s) contain notable unseen category share.",
+        "action": "No notable unseen-category pressure detected."
+      }
+    ],
+    "missing_drift": [
+      {
+        "column": "customer_id",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "age",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "tenure_months",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "city",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "plan",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "contract_type",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "internet_service",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "monthly_charges",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      }
+    ],
+    "numeric_drift": [
+      {
+        "column": "age",
+        "reference_mean": 40.9889,
+        "comparison_mean": 40.9889,
+        "reference_std": 12.407,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "tenure_months",
+        "reference_mean": 29.5,
+        "comparison_mean": 29.5,
+        "reference_std": 17.2603,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "monthly_charges",
+        "reference_mean": 1284.0833,
+        "comparison_mean": 1284.0833,
+        "reference_std": 530.4238,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "total_charges",
+        "reference_mean": 37255.0833,
+        "comparison_mean": 37255.0833,
+        "reference_std": 26837.5723,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "support_tickets",
+        "reference_mean": 4,
+        "comparison_mean": 4,
+        "reference_std": 2.6458,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "satisfaction_score",
+        "reference_mean": 6.75,
+        "comparison_mean": 6.75,
+        "reference_std": 2.5207,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "last_login_days",
+        "reference_mean": 37.1667,
+        "comparison_mean": 37.1667,
+        "reference_std": 21.5787,
+        "mean_shift": 0,
+        "severity": "low"
+      }
+    ],
+    "categorical_drift": [
+      {
+        "column": "customer_id",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "C0001",
+        "comparison_top": "C0001",
+        "severity": "low"
+      },
+      {
+        "column": "city",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Bangalore",
+        "comparison_top": "Bangalore",
+        "severity": "low"
+      },
+      {
+        "column": "plan",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Basic",
+        "comparison_top": "Basic",
+        "severity": "low"
+      },
+      {
+        "column": "contract_type",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Annual",
+        "comparison_top": "Annual",
+        "severity": "low"
+      },
+      {
+        "column": "internet_service",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Mobile",
+        "comparison_top": "Mobile",
+        "severity": "low"
+      },
+      {
+        "column": "payment_method",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "UPI",
+        "comparison_top": "UPI",
+        "severity": "low"
+      }
+    ],
+    "actions": [
+      "Keep this comparison as the baseline for recurring drift monitoring."
+    ],
+    "drift_id": "aeae00f44fcc407281d29920d38fc3c0",
+    "created_at": "2026-06-24T09:37:43Z"
+  },
+  {
+    "available": true,
+    "model_id": "fc76c659a8044b7fab4cbf5eb54b0d59",
+    "reference_dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "reference_dataset_name": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "comparison_dataset_id": "d046c8000684473cb294b669616be92c",
+    "comparison_dataset_name": "cleaned_customer_churn.csv",
+    "target_column": "churn",
+    "status": "blocked",
+    "score": 67,
+    "summary": "Drift check is blocked because required model feature columns are missing.",
+    "feature_count": 13,
+    "compared_feature_count": 12,
+    "missing_required_columns": [
+      "customer_id"
+    ],
+    "extra_columns": [],
+    "row_counts": {
+      "reference": 180,
+      "comparison": 180
+    },
+    "column_counts": {
+      "reference": 14,
+      "comparison": 13,
+      "required_features": 13,
+      "compared_features": 12
+    },
+    "checks": [
+      {
+        "status": "blocked",
+        "label": "Schema compatibility",
+        "detail": "1 required feature column(s) are missing from the comparison dataset.",
+        "action": "Align the scoring dataset schema with the trained model features."
+      },
+      {
+        "status": "pass",
+        "label": "Row volume",
+        "detail": "Compared 180 row(s) against 180 training row(s).",
+        "action": "Sample size is sufficient for a quick drift screen."
+      },
+      {
+        "status": "pass",
+        "label": "Missing values",
+        "detail": "0 high and 0 medium missing-rate shift(s) detected.",
+        "action": "Missing-value patterns are stable."
+      },
+      {
+        "status": "pass",
+        "label": "Numeric distribution",
+        "detail": "0 high and 0 medium numeric mean shift(s) detected.",
+        "action": "Numeric feature averages are stable."
+      },
+      {
+        "status": "pass",
+        "label": "Category distribution",
+        "detail": "0 high and 0 medium category shift(s) detected.",
+        "action": "Categorical feature mix is stable."
+      },
+      {
+        "status": "pass",
+        "label": "Unseen categories",
+        "detail": "0 feature(s) contain notable unseen category share.",
+        "action": "No notable unseen-category pressure detected."
+      }
+    ],
+    "missing_drift": [
+      {
+        "column": "age",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "tenure_months",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "city",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "plan",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "contract_type",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "internet_service",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "monthly_charges",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      },
+      {
+        "column": "total_charges",
+        "reference_missing_percent": 0,
+        "comparison_missing_percent": 0,
+        "shift_points": 0,
+        "severity": "low"
+      }
+    ],
+    "numeric_drift": [
+      {
+        "column": "age",
+        "reference_mean": 40.9889,
+        "comparison_mean": 40.9889,
+        "reference_std": 12.407,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "tenure_months",
+        "reference_mean": 29.5,
+        "comparison_mean": 29.5,
+        "reference_std": 17.2603,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "monthly_charges",
+        "reference_mean": 1284.0833,
+        "comparison_mean": 1284.0833,
+        "reference_std": 530.4238,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "total_charges",
+        "reference_mean": 37255.0833,
+        "comparison_mean": 37255.0833,
+        "reference_std": 26837.5723,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "support_tickets",
+        "reference_mean": 4,
+        "comparison_mean": 4,
+        "reference_std": 2.6458,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "satisfaction_score",
+        "reference_mean": 6.75,
+        "comparison_mean": 6.75,
+        "reference_std": 2.5207,
+        "mean_shift": 0,
+        "severity": "low"
+      },
+      {
+        "column": "last_login_days",
+        "reference_mean": 37.1667,
+        "comparison_mean": 37.1667,
+        "reference_std": 21.5787,
+        "mean_shift": 0,
+        "severity": "low"
+      }
+    ],
+    "categorical_drift": [
+      {
+        "column": "city",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Bangalore",
+        "comparison_top": "Bangalore",
+        "severity": "low"
+      },
+      {
+        "column": "plan",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Basic",
+        "comparison_top": "Basic",
+        "severity": "low"
+      },
+      {
+        "column": "contract_type",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Annual",
+        "comparison_top": "Annual",
+        "severity": "low"
+      },
+      {
+        "column": "internet_service",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "Mobile",
+        "comparison_top": "Mobile",
+        "severity": "low"
+      },
+      {
+        "column": "payment_method",
+        "distribution_shift": 0,
+        "unseen_category_share": 0,
+        "reference_top": "UPI",
+        "comparison_top": "UPI",
+        "severity": "low"
+      }
+    ],
+    "actions": [
+      "Add the missing model feature columns before scoring or retrain with the new schema."
+    ],
+    "drift_id": "dae185d673e346659f55a06368b8ffb0",
+    "created_at": "2026-06-24T09:37:12Z"
+  }
+]

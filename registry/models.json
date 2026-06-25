@@ -1,0 +1,1660 @@
+[
+  {
+    "experiment_id": "f2e9279fdfa84b04afd9e2fcd989bbad",
+    "experiment_label": "churn classification run",
+    "model_id": "f2e9279fdfa84b04afd9e2fcd989bbad",
+    "dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "best_model": "AdaBoost Classifier",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9662,
+    "quality_label": "excellent",
+    "holdout_metrics": {
+      "accuracy": 0.9444,
+      "balanced_accuracy": 0.9167,
+      "precision_weighted": 0.9487,
+      "recall_weighted": 0.9444,
+      "f1_weighted": 0.943
+    },
+    "baseline_metrics": {
+      "strategy": "always predict 0",
+      "accuracy": 0.6667,
+      "balanced_accuracy": 0.5,
+      "f1_weighted": 0.5333
+    },
+    "candidate_models": 18,
+    "trained_models": 18,
+    "failed_models": 0,
+    "raw_feature_count": 13,
+    "model_feature_count": 12,
+    "selected_feature_count": 13,
+    "excluded_feature_count": 0,
+    "dropped_feature_count": 1,
+    "leakage_feature_count": 0,
+    "leakage_features": [],
+    "engineered_feature_count": 0,
+    "recommended_threshold": 0.5,
+    "tuning_studio": {
+      "available": true,
+      "selected_models": [
+        "AdaBoost Classifier",
+        "Gradient Boosting Tuned Classifier",
+        "Histogram Gradient Boosting Classifier"
+      ],
+      "results": [
+        {
+          "model_name": "AdaBoost Classifier",
+          "status": "no_gain",
+          "base_score": 0.9662,
+          "tuned_score": 0.8996,
+          "holdout_score": 0.943,
+          "improvement": -0.0666,
+          "trials": 8,
+          "best_params": {
+            "learning_rate": 0.05,
+            "n_estimators": 120
+          },
+          "metrics": {
+            "accuracy": 0.9444,
+            "balanced_accuracy": 0.9167,
+            "precision_weighted": 0.9487,
+            "recall_weighted": 0.9444,
+            "f1_weighted": 0.943
+          },
+          "cross_validation": {
+            "available": true,
+            "metric": "f1_weighted",
+            "folds": 5,
+            "mean": 0.8996,
+            "std": 0.0972
+          }
+        },
+        {
+          "model_name": "Gradient Boosting Tuned Classifier",
+          "status": "no_gain",
+          "base_score": 0.9605,
+          "tuned_score": 0.9603,
+          "holdout_score": 0.943,
+          "improvement": -0.0002,
+          "trials": 8,
+          "best_params": {
+            "learning_rate": 0.035,
+            "max_depth": 2,
+            "n_estimators": 120
+          },
+          "metrics": {
+            "accuracy": 0.9444,
+            "balanced_accuracy": 0.9167,
+            "precision_weighted": 0.9487,
+            "recall_weighted": 0.9444,
+            "f1_weighted": 0.943
+          },
+          "cross_validation": {
+            "available": true,
+            "metric": "f1_weighted",
+            "folds": 5,
+            "mean": 0.9603,
+            "std": 0.0141
+          }
+        },
+        {
+          "model_name": "Histogram Gradient Boosting Classifier",
+          "status": "improved",
+          "base_score": 0.9553,
+          "tuned_score": 0.9662,
+          "holdout_score": 0.943,
+          "improvement": 0.0109,
+          "trials": 4,
+          "best_params": {
+            "learning_rate": 0.045,
+            "max_iter": 120
+          },
+          "metrics": {
+            "accuracy": 0.9444,
+            "balanced_accuracy": 0.9167,
+            "precision_weighted": 0.9487,
+            "recall_weighted": 0.9444,
+            "f1_weighted": 0.943
+          },
+          "cross_validation": {
+            "available": true,
+            "metric": "f1_weighted",
+            "folds": 5,
+            "mean": 0.9662,
+            "std": 0.0211
+          }
+        }
+      ],
+      "tuned_count": 3,
+      "improved_count": 1,
+      "saved_tuned_model": false,
+      "best_tuned_model": null
+    },
+    "class_balance": {
+      "available": true,
+      "severity": "mild",
+      "class_count": 2,
+      "majority_class": "0",
+      "minority_class": "1",
+      "majority_count": 121,
+      "minority_count": 59,
+      "majority_share": 0.6722,
+      "minority_share": 0.3278,
+      "imbalance_ratio": 2.05,
+      "classes": [
+        {
+          "label": "0",
+          "count": 121,
+          "share": 0.6722
+        },
+        {
+          "label": "1",
+          "count": 59,
+          "share": 0.3278
+        }
+      ]
+    },
+    "accuracy_improver": {
+      "available": true,
+      "kind": "classification",
+      "status": "needs_attention",
+      "summary": "Best classifier is AdaBoost Classifier with weighted F1 0.943 and accuracy 0.9444.",
+      "best_model": "AdaBoost Classifier",
+      "checks": [
+        {
+          "label": "Model signal",
+          "status": "good",
+          "detail": "Best model beats baseline by 0.4097 weighted F1."
+        },
+        {
+          "label": "Class balance",
+          "status": "warning",
+          "detail": "Top class 0 is 67.2%; minority class 1 is 32.8%."
+        },
+        {
+          "label": "Accuracy gap",
+          "status": "good",
+          "detail": "Raw accuracy and balanced accuracy are close."
+        },
+        {
+          "label": "Feature cleanup",
+          "status": "good",
+          "detail": "Removed 1 noisy/ID-like feature(s) before training."
+        }
+      ],
+      "actions": [
+        "Use the balanced/oversampled models near the top of the leaderboard when minority recall matters."
+      ]
+    },
+    "explainability_studio": {
+      "available": true,
+      "method": "permutation_importance",
+      "summary": "AdaBoost Classifier is strongly influenced by satisfaction_score for f1_weighted.",
+      "cards": [
+        {
+          "label": "Top driver",
+          "value": "satisfaction_score",
+          "note": "High impact"
+        },
+        {
+          "label": "Driver score",
+          "value": 0.2521,
+          "note": "f1_weighted"
+        },
+        {
+          "label": "Helpful features",
+          "value": 12,
+          "note": "improved validation score"
+        },
+        {
+          "label": "Weak signals",
+          "value": 0,
+          "note": "possible noise"
+        },
+        {
+          "label": "Review focus",
+          "value": "1",
+          "note": "weakest recall focus"
+        }
+      ],
+      "features": [
+        {
+          "feature": "satisfaction_score",
+          "importance": 0.2521,
+          "impact": "Helpful",
+          "impact_key": "helpful",
+          "strength": "High",
+          "share": 0.4327,
+          "interpretation": "Validation score dropped when this feature was shuffled."
+        },
+        {
+          "feature": "last_login_days",
+          "importance": 0.1366,
+          "impact": "Helpful",
+          "impact_key": "helpful",
+          "strength": "High",
+          "share": 0.2345,
+          "interpretation": "Validation score dropped when this feature was shuffled."
+        },
+        {
+          "feature": "internet_service",
+          "importance": 0.0935,
+          "impact": "Helpful",
+          "impact_key": "helpful",
+          "strength": "High",
+          "share": 0.1605,
+          "interpretation": "Validation score dropped when this feature was shuffled."
+        },
+        {
+          "feature": "contract_type",
+          "importance": 0.0448,
+          "impact": "Helpful",
+          "impact_key": "helpful",
+          "strength": "High",
+          "share": 0.0769,
+          "interpretation": "Validation score dropped when this feature was shuffled."
+        },
+        {
+          "feature": "payment_method",
+          "importance": 0.0326,
+          "impact": "Helpful",
+          "impact_key": "helpful",
+          "strength": "High",
+          "share": 0.056,
+          "interpretation": "Validation score dropped when this feature was shuffled."
+        },
+        {
+          "feature": "total_charges",
+          "importance": 0.023,
+          "impact": "Helpful",
+          "impact_key": "helpful",
+          "strength": "Medium",
+          "share": 0.0395,
+          "interpretation": "Validation score dropped when this feature was shuffled."
+        },
+        {
+          "feature": "age",
+          "importance": 0.0,
+          "impact": "Helpful",
+          "impact_key": "helpful",
+          "strength": "Low",
+          "share": 0.0,
+          "interpretation": "Validation score dropped when this feature was shuffled."
+        },
+        {
+          "feature": "tenure_months",
+          "importance": 0.0,
+          "impact": "Helpful",
+          "impact_key": "helpful",
+          "strength": "Low",
+          "share": 0.0,
+          "interpretation": "Validation score dropped when this feature was shuffled."
+        },
+        {
+          "feature": "city",
+          "importance": 0.0,
+          "impact": "Helpful",
+          "impact_key": "helpful",
+          "strength": "Low",
+          "share": 0.0,
+          "interpretation": "Validation score dropped when this feature was shuffled."
+        },
+        {
+          "feature": "plan",
+          "importance": 0.0,
+          "impact": "Helpful",
+          "impact_key": "helpful",
+          "strength": "Low",
+          "share": 0.0,
+          "interpretation": "Validation score dropped when this feature was shuffled."
+        },
+        {
+          "feature": "monthly_charges",
+          "importance": 0.0,
+          "impact": "Helpful",
+          "impact_key": "helpful",
+          "strength": "Low",
+          "share": 0.0,
+          "interpretation": "Validation score dropped when this feature was shuffled."
+        },
+        {
+          "feature": "support_tickets",
+          "importance": 0.0,
+          "impact": "Helpful",
+          "impact_key": "helpful",
+          "strength": "Low",
+          "share": 0.0,
+          "interpretation": "Validation score dropped when this feature was shuffled."
+        }
+      ],
+      "actions": [
+        "Use satisfaction_score first when explaining predictions to users.",
+        "Review the top three drivers before accepting low-confidence predictions.",
+        "Keep the 1 dropped noisy feature(s) out of future training runs."
+      ],
+      "review_focus": [
+        "satisfaction_score",
+        "last_login_days",
+        "internet_service"
+      ]
+    },
+    "top_features": [
+      {
+        "feature": "satisfaction_score",
+        "importance": 0.2521,
+        "impact": "Helpful",
+        "impact_key": "helpful",
+        "strength": "High",
+        "share": 0.4327,
+        "interpretation": "Validation score dropped when this feature was shuffled."
+      },
+      {
+        "feature": "last_login_days",
+        "importance": 0.1366,
+        "impact": "Helpful",
+        "impact_key": "helpful",
+        "strength": "High",
+        "share": 0.2345,
+        "interpretation": "Validation score dropped when this feature was shuffled."
+      },
+      {
+        "feature": "internet_service",
+        "importance": 0.0935,
+        "impact": "Helpful",
+        "impact_key": "helpful",
+        "strength": "High",
+        "share": 0.1605,
+        "interpretation": "Validation score dropped when this feature was shuffled."
+      },
+      {
+        "feature": "contract_type",
+        "importance": 0.0448,
+        "impact": "Helpful",
+        "impact_key": "helpful",
+        "strength": "High",
+        "share": 0.0769,
+        "interpretation": "Validation score dropped when this feature was shuffled."
+      },
+      {
+        "feature": "payment_method",
+        "importance": 0.0326,
+        "impact": "Helpful",
+        "impact_key": "helpful",
+        "strength": "High",
+        "share": 0.056,
+        "interpretation": "Validation score dropped when this feature was shuffled."
+      },
+      {
+        "feature": "total_charges",
+        "importance": 0.023,
+        "impact": "Helpful",
+        "impact_key": "helpful",
+        "strength": "Medium",
+        "share": 0.0395,
+        "interpretation": "Validation score dropped when this feature was shuffled."
+      },
+      {
+        "feature": "age",
+        "importance": 0.0,
+        "impact": "Helpful",
+        "impact_key": "helpful",
+        "strength": "Low",
+        "share": 0.0,
+        "interpretation": "Validation score dropped when this feature was shuffled."
+      },
+      {
+        "feature": "tenure_months",
+        "importance": 0.0,
+        "impact": "Helpful",
+        "impact_key": "helpful",
+        "strength": "Low",
+        "share": 0.0,
+        "interpretation": "Validation score dropped when this feature was shuffled."
+      }
+    ],
+    "run_context": {
+      "mode": "retrain_from_drift",
+      "source_model_id": "fc76c659a8044b7fab4cbf5eb54b0d59",
+      "source_dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+      "comparison_dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+      "comparison_dataset_name": "customer_churn.csv",
+      "drift_id": "ba53aaa131354a9289e956948e033697",
+      "reused_feature_count": 13,
+      "feature_strategy": "source_model_features"
+    },
+    "training_summary": {
+      "train_rows": 144,
+      "test_rows": 36,
+      "raw_feature_count": 13,
+      "feature_count": 12,
+      "candidate_models": 18,
+      "trained_models": 18,
+      "failed_models": 0,
+      "feature_columns": [
+        "customer_id",
+        "age",
+        "tenure_months",
+        "city",
+        "plan",
+        "contract_type",
+        "internet_service",
+        "monthly_charges",
+        "total_charges",
+        "support_tickets",
+        "satisfaction_score",
+        "last_login_days",
+        "payment_method"
+      ],
+      "model_feature_columns": [
+        "age",
+        "tenure_months",
+        "city",
+        "plan",
+        "contract_type",
+        "internet_service",
+        "monthly_charges",
+        "total_charges",
+        "support_tickets",
+        "satisfaction_score",
+        "last_login_days",
+        "payment_method"
+      ],
+      "dropped_features": [
+        {
+          "name": "customer_id",
+          "reason": "identifier-like high-cardinality feature",
+          "kind": "id_like"
+        }
+      ],
+      "leakage_features": [],
+      "engineered_features": [],
+      "selected_feature_count": 13,
+      "excluded_feature_count": 0,
+      "class_balance_severity": "mild",
+      "balanced_candidate_count": 4,
+      "tuned_models": 3,
+      "improved_tuned_models": 1,
+      "saved_tuned_model": false
+    },
+    "leaderboard_snapshot": [
+      {
+        "model_name": "AdaBoost Classifier",
+        "status": "trained",
+        "quality_label": "excellent",
+        "rank_score": 0.9662,
+        "metrics": {
+          "accuracy": 0.9444,
+          "balanced_accuracy": 0.9167,
+          "precision_weighted": 0.9487,
+          "recall_weighted": 0.9444,
+          "f1_weighted": 0.943
+        },
+        "cross_validation": {
+          "available": true,
+          "metric": "f1_weighted",
+          "folds": 5,
+          "mean": 0.9662,
+          "std": 0.0211
+        },
+        "error": null,
+        "tuned_from": null
+      },
+      {
+        "model_name": "Gradient Boosting Tuned Classifier",
+        "status": "trained",
+        "quality_label": "excellent",
+        "rank_score": 0.9605,
+        "metrics": {
+          "accuracy": 0.9444,
+          "balanced_accuracy": 0.9167,
+          "precision_weighted": 0.9487,
+          "recall_weighted": 0.9444,
+          "f1_weighted": 0.943
+        },
+        "cross_validation": {
+          "available": true,
+          "metric": "f1_weighted",
+          "folds": 5,
+          "mean": 0.9605,
+          "std": 0.0287
+        },
+        "error": null,
+        "tuned_from": null
+      },
+      {
+        "model_name": "Histogram Gradient Boosting Classifier",
+        "status": "trained",
+        "quality_label": "excellent",
+        "rank_score": 0.9553,
+        "metrics": {
+          "accuracy": 0.9444,
+          "balanced_accuracy": 0.9167,
+          "precision_weighted": 0.9487,
+          "recall_weighted": 0.9444,
+          "f1_weighted": 0.943
+        },
+        "cross_validation": {
+          "available": true,
+          "metric": "f1_weighted",
+          "folds": 5,
+          "mean": 0.9553,
+          "std": 0.0285
+        },
+        "error": null,
+        "tuned_from": null
+      },
+      {
+        "model_name": "Oversampled Gradient Boosting",
+        "status": "trained",
+        "quality_label": "excellent",
+        "rank_score": 0.9498,
+        "metrics": {
+          "accuracy": 0.9444,
+          "balanced_accuracy": 0.9167,
+          "precision_weighted": 0.9487,
+          "recall_weighted": 0.9444,
+          "f1_weighted": 0.943
+        },
+        "cross_validation": {
+          "available": true,
+          "metric": "f1_weighted",
+          "folds": 5,
+          "mean": 0.9498,
+          "std": 0.0114
+        },
+        "error": null,
+        "tuned_from": null
+      },
+      {
+        "model_name": "Voting Ensemble Classifier",
+        "status": "trained",
+        "quality_label": "excellent",
+        "rank_score": 0.9391,
+        "metrics": {
+          "accuracy": 0.9444,
+          "balanced_accuracy": 0.9167,
+          "precision_weighted": 0.9487,
+          "recall_weighted": 0.9444,
+          "f1_weighted": 0.943
+        },
+        "cross_validation": {
+          "available": true,
+          "metric": "f1_weighted",
+          "folds": 5,
+          "mean": 0.9391,
+          "std": 0.0403
+        },
+        "error": null,
+        "tuned_from": null
+      },
+      {
+        "model_name": "Gradient Boosting Classifier",
+        "status": "trained",
+        "quality_label": "excellent",
+        "rank_score": 0.9333,
+        "metrics": {
+          "accuracy": 0.9167,
+          "balanced_accuracy": 0.8958,
+          "precision_weighted": 0.9164,
+          "recall_weighted": 0.9167,
+          "f1_weighted": 0.9157
+        },
+        "cross_validation": {
+          "available": true,
+          "metric": "f1_weighted",
+          "folds": 5,
+          "mean": 0.9333,
+          "std": 0.0136
+        },
+        "error": null,
+        "tuned_from": null
+      },
+      {
+        "model_name": "Decision Tree Classifier",
+        "status": "trained",
+        "quality_label": "excellent",
+        "rank_score": 0.9286,
+        "metrics": {
+          "accuracy": 0.8611,
+          "balanced_accuracy": 0.8542,
+          "precision_weighted": 0.8651,
+          "recall_weighted": 0.8611,
+          "f1_weighted": 0.8624
+        },
+        "cross_validation": {
+          "available": true,
+          "metric": "f1_weighted",
+          "folds": 5,
+          "mean": 0.9286,
+          "std": 0.0445
+        },
+        "error": null,
+        "tuned_from": null
+      },
+      {
+        "model_name": "Linear SVM",
+        "status": "trained",
+        "quality_label": "excellent",
+        "rank_score": 0.9231,
+        "metrics": {
+          "accuracy": 0.9167,
+          "balanced_accuracy": 0.8958,
+          "precision_weighted": 0.9164,
+          "recall_weighted": 0.9167,
+          "f1_weighted": 0.9157
+        },
+        "cross_validation": {
+          "available": true,
+          "metric": "f1_weighted",
+          "folds": 5,
+          "mean": 0.9231,
+          "std": 0.0364
+        },
+        "error": null,
+        "tuned_from": null
+      },
+      {
+        "model_name": "Random Forest Classifier",
+        "status": "trained",
+        "quality_label": "excellent",
+        "rank_score": 0.9182,
+        "metrics": {
+          "accuracy": 0.9167,
+          "balanced_accuracy": 0.8958,
+          "precision_weighted": 0.9164,
+          "recall_weighted": 0.9167,
+          "f1_weighted": 0.9157
+        },
+        "cross_validation": {
+          "available": true,
+          "metric": "f1_weighted",
+          "folds": 5,
+          "mean": 0.9182,
+          "std": 0.0595
+        },
+        "error": null,
+        "tuned_from": null
+      },
+      {
+        "model_name": "Balanced Subsample Forest Classifier",
+        "status": "trained",
+        "quality_label": "excellent",
+        "rank_score": 0.9182,
+        "metrics": {
+          "accuracy": 0.9167,
+          "balanced_accuracy": 0.8958,
+          "precision_weighted": 0.9164,
+          "recall_weighted": 0.9167,
+          "f1_weighted": 0.9157
+        },
+        "cross_validation": {
+          "available": true,
+          "metric": "f1_weighted",
+          "folds": 5,
+          "mean": 0.9182,
+          "std": 0.0595
+        },
+        "error": null,
+        "tuned_from": null
+      },
+      {
+        "model_name": "Oversampled Random Forest",
+        "status": "trained",
+        "quality_label": "excellent",
+        "rank_score": 0.918,
+        "metrics": {
+          "accuracy": 0.9167,
+          "balanced_accuracy": 0.8958,
+          "precision_weighted": 0.9164,
+          "recall_weighted": 0.9167,
+          "f1_weighted": 0.9157
+        },
+        "cross_validation": {
+          "available": true,
+          "metric": "f1_weighted",
+          "folds": 5,
+          "mean": 0.918,
+          "std": 0.0546
+        },
+        "error": null,
+        "tuned_from": null
+      },
+      {
+        "model_name": "Logistic Regression",
+        "status": "trained",
+        "quality_label": "excellent",
+        "rank_score": 0.9178,
+        "metrics": {
+          "accuracy": 0.9167,
+          "balanced_accuracy": 0.8958,
+          "precision_weighted": 0.9164,
+          "recall_weighted": 0.9167,
+          "f1_weighted": 0.9157
+        },
+        "cross_validation": {
+          "available": true,
+          "metric": "f1_weighted",
+          "folds": 5,
+          "mean": 0.9178,
+          "std": 0.0422
+        },
+        "error": null,
+        "tuned_from": null
+      }
+    ],
+    "next_actions": [
+      "Add features that separate actual '1' from predicted '0'.",
+      "Keep identifier-like columns out of training unless they carry real behavioral signal.",
+      "Top models are very close; retrain after adding rows to confirm the winner."
+    ],
+    "prediction_api": "/api/predict/f2e9279fdfa84b04afd9e2fcd989bbad",
+    "created_at": "2026-06-24T09:58:26Z"
+  },
+  {
+    "model_id": "59362ffa7be94bb38686574ce2a1ffa9",
+    "dataset_id": "leakage-test",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "best_model": "AdaBoost Classifier",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9662,
+    "quality_label": "excellent",
+    "holdout_metrics": {
+      "accuracy": 0.9444,
+      "balanced_accuracy": 0.9167,
+      "precision_weighted": 0.9487,
+      "recall_weighted": 0.9444,
+      "f1_weighted": 0.943
+    },
+    "baseline_metrics": {
+      "strategy": "always predict 0",
+      "accuracy": 0.6667,
+      "balanced_accuracy": 0.5,
+      "f1_weighted": 0.5333
+    },
+    "candidate_models": 18,
+    "trained_models": 18,
+    "failed_models": 0,
+    "raw_feature_count": 14,
+    "model_feature_count": 12,
+    "selected_feature_count": 14,
+    "excluded_feature_count": 0,
+    "dropped_feature_count": 1,
+    "leakage_feature_count": 1,
+    "leakage_features": [
+      {
+        "name": "churn_leak",
+        "severity": "high",
+        "score": 1.0,
+        "reason": "feature value almost exactly matches the target; column name contains the target name; encoded target correlation is 1.0; feature categories predict the target with 100.0% purity",
+        "action": "Auto-excluded from model training to prevent misleading accuracy."
+      }
+    ],
+    "engineered_feature_count": 0,
+    "recommended_threshold": 0.5,
+    "tuning_studio": {
+      "available": true,
+      "selected_models": [
+        "AdaBoost Classifier",
+        "Gradient Boosting Tuned Classifier",
+        "Histogram Gradient Boosting Classifier"
+      ],
+      "results": [
+        {
+          "model_name": "AdaBoost Classifier",
+          "status": "no_gain",
+          "base_score": 0.9662,
+          "tuned_score": 0.8996,
+          "holdout_score": 0.943,
+          "improvement": -0.0666,
+          "trials": 8,
+          "best_params": {
+            "learning_rate": 0.05,
+            "n_estimators": 120
+          },
+          "metrics": {
+            "accuracy": 0.9444,
+            "balanced_accuracy": 0.9167,
+            "precision_weighted": 0.9487,
+            "recall_weighted": 0.9444,
+            "f1_weighted": 0.943
+          },
+          "cross_validation": {
+            "available": true,
+            "metric": "f1_weighted",
+            "folds": 5,
+            "mean": 0.8996,
+            "std": 0.0972
+          }
+        },
+        {
+          "model_name": "Gradient Boosting Tuned Classifier",
+          "status": "no_gain",
+          "base_score": 0.9605,
+          "tuned_score": 0.9603,
+          "holdout_score": 0.943,
+          "improvement": -0.0002,
+          "trials": 8,
+          "best_params": {
+            "learning_rate": 0.035,
+            "max_depth": 2,
+            "n_estimators": 120
+          },
+          "metrics": {
+            "accuracy": 0.9444,
+            "balanced_accuracy": 0.9167,
+            "precision_weighted": 0.9487,
+            "recall_weighted": 0.9444,
+            "f1_weighted": 0.943
+          },
+          "cross_validation": {
+            "available": true,
+            "metric": "f1_weighted",
+            "folds": 5,
+            "mean": 0.9603,
+            "std": 0.0141
+          }
+        },
+        {
+          "model_name": "Histogram Gradient Boosting Classifier",
+          "status": "improved",
+          "base_score": 0.9553,
+          "tuned_score": 0.9662,
+          "holdout_score": 0.943,
+          "improvement": 0.0109,
+          "trials": 4,
+          "best_params": {
+            "learning_rate": 0.045,
+            "max_iter": 120
+          },
+          "metrics": {
+            "accuracy": 0.9444,
+            "balanced_accuracy": 0.9167,
+            "precision_weighted": 0.9487,
+            "recall_weighted": 0.9444,
+            "f1_weighted": 0.943
+          },
+          "cross_validation": {
+            "available": true,
+            "metric": "f1_weighted",
+            "folds": 5,
+            "mean": 0.9662,
+            "std": 0.0211
+          }
+        }
+      ],
+      "tuned_count": 3,
+      "improved_count": 1,
+      "saved_tuned_model": false,
+      "best_tuned_model": null
+    },
+    "class_balance": {
+      "available": true,
+      "severity": "mild",
+      "class_count": 2,
+      "majority_class": "0",
+      "minority_class": "1",
+      "majority_count": 121,
+      "minority_count": 59,
+      "majority_share": 0.6722,
+      "minority_share": 0.3278,
+      "imbalance_ratio": 2.05,
+      "classes": [
+        {
+          "label": "0",
+          "count": 121,
+          "share": 0.6722
+        },
+        {
+          "label": "1",
+          "count": 59,
+          "share": 0.3278
+        }
+      ]
+    },
+    "accuracy_improver": {
+      "available": true,
+      "kind": "classification",
+      "status": "needs_attention",
+      "summary": "Best classifier is AdaBoost Classifier with weighted F1 0.943 and accuracy 0.9444.",
+      "best_model": "AdaBoost Classifier",
+      "checks": [
+        {
+          "label": "Model signal",
+          "status": "good",
+          "detail": "Best model beats baseline by 0.4097 weighted F1."
+        },
+        {
+          "label": "Class balance",
+          "status": "warning",
+          "detail": "Top class 0 is 67.2%; minority class 1 is 32.8%."
+        },
+        {
+          "label": "Accuracy gap",
+          "status": "good",
+          "detail": "Raw accuracy and balanced accuracy are close."
+        },
+        {
+          "label": "Leakage guard",
+          "status": "warning",
+          "detail": "Auto-excluded 1 possible target-leaking feature(s)."
+        },
+        {
+          "label": "Feature cleanup",
+          "status": "good",
+          "detail": "Removed 1 noisy/ID-like feature(s) before training."
+        }
+      ],
+      "actions": [
+        "Use the balanced/oversampled models near the top of the leaderboard when minority recall matters.",
+        "Keep leakage columns excluded unless they are genuinely available before prediction time."
+      ]
+    },
+    "next_actions": [
+      "Add features that separate actual '1' from predicted '0'.",
+      "Review auto-excluded leakage columns before trusting unusually high accuracy.",
+      "Keep identifier-like columns out of training unless they carry real behavioral signal.",
+      "Top models are very close; retrain after adding rows to confirm the winner."
+    ],
+    "prediction_api": "/api/predict/59362ffa7be94bb38686574ce2a1ffa9",
+    "created_at": "2026-06-24T05:19:28Z"
+  },
+  {
+    "model_id": "fc76c659a8044b7fab4cbf5eb54b0d59",
+    "dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "best_model": "AdaBoost Classifier",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9662,
+    "quality_label": "excellent",
+    "holdout_metrics": {
+      "accuracy": 0.9444,
+      "balanced_accuracy": 0.9167,
+      "precision_weighted": 0.9487,
+      "recall_weighted": 0.9444,
+      "f1_weighted": 0.943
+    },
+    "baseline_metrics": {
+      "strategy": "always predict 0",
+      "accuracy": 0.6667,
+      "balanced_accuracy": 0.5,
+      "f1_weighted": 0.5333
+    },
+    "candidate_models": 18,
+    "trained_models": 18,
+    "failed_models": 0,
+    "raw_feature_count": 13,
+    "model_feature_count": 12,
+    "selected_feature_count": 13,
+    "excluded_feature_count": 0,
+    "dropped_feature_count": 1,
+    "engineered_feature_count": 0,
+    "recommended_threshold": 0.5,
+    "tuning_studio": {
+      "available": true,
+      "selected_models": [
+        "AdaBoost Classifier",
+        "Gradient Boosting Tuned Classifier",
+        "Histogram Gradient Boosting Classifier"
+      ],
+      "results": [
+        {
+          "model_name": "AdaBoost Classifier",
+          "status": "no_gain",
+          "base_score": 0.9662,
+          "tuned_score": 0.8996,
+          "holdout_score": 0.943,
+          "improvement": -0.0666,
+          "trials": 8,
+          "best_params": {
+            "learning_rate": 0.05,
+            "n_estimators": 120
+          },
+          "metrics": {
+            "accuracy": 0.9444,
+            "balanced_accuracy": 0.9167,
+            "precision_weighted": 0.9487,
+            "recall_weighted": 0.9444,
+            "f1_weighted": 0.943
+          },
+          "cross_validation": {
+            "available": true,
+            "metric": "f1_weighted",
+            "folds": 5,
+            "mean": 0.8996,
+            "std": 0.0972
+          }
+        },
+        {
+          "model_name": "Gradient Boosting Tuned Classifier",
+          "status": "no_gain",
+          "base_score": 0.9605,
+          "tuned_score": 0.9603,
+          "holdout_score": 0.943,
+          "improvement": -0.0002,
+          "trials": 8,
+          "best_params": {
+            "learning_rate": 0.035,
+            "max_depth": 2,
+            "n_estimators": 120
+          },
+          "metrics": {
+            "accuracy": 0.9444,
+            "balanced_accuracy": 0.9167,
+            "precision_weighted": 0.9487,
+            "recall_weighted": 0.9444,
+            "f1_weighted": 0.943
+          },
+          "cross_validation": {
+            "available": true,
+            "metric": "f1_weighted",
+            "folds": 5,
+            "mean": 0.9603,
+            "std": 0.0141
+          }
+        },
+        {
+          "model_name": "Histogram Gradient Boosting Classifier",
+          "status": "improved",
+          "base_score": 0.9553,
+          "tuned_score": 0.9662,
+          "holdout_score": 0.943,
+          "improvement": 0.0109,
+          "trials": 4,
+          "best_params": {
+            "learning_rate": 0.045,
+            "max_iter": 120
+          },
+          "metrics": {
+            "accuracy": 0.9444,
+            "balanced_accuracy": 0.9167,
+            "precision_weighted": 0.9487,
+            "recall_weighted": 0.9444,
+            "f1_weighted": 0.943
+          },
+          "cross_validation": {
+            "available": true,
+            "metric": "f1_weighted",
+            "folds": 5,
+            "mean": 0.9662,
+            "std": 0.0211
+          }
+        }
+      ],
+      "tuned_count": 3,
+      "improved_count": 1,
+      "saved_tuned_model": false,
+      "best_tuned_model": null
+    },
+    "class_balance": {
+      "available": true,
+      "severity": "mild",
+      "class_count": 2,
+      "majority_class": "0",
+      "minority_class": "1",
+      "majority_count": 121,
+      "minority_count": 59,
+      "majority_share": 0.6722,
+      "minority_share": 0.3278,
+      "imbalance_ratio": 2.05,
+      "classes": [
+        {
+          "label": "0",
+          "count": 121,
+          "share": 0.6722
+        },
+        {
+          "label": "1",
+          "count": 59,
+          "share": 0.3278
+        }
+      ]
+    },
+    "accuracy_improver": {
+      "available": true,
+      "kind": "classification",
+      "status": "needs_attention",
+      "summary": "Best classifier is AdaBoost Classifier with weighted F1 0.943 and accuracy 0.9444.",
+      "best_model": "AdaBoost Classifier",
+      "checks": [
+        {
+          "label": "Model signal",
+          "status": "good",
+          "detail": "Best model beats baseline by 0.4097 weighted F1."
+        },
+        {
+          "label": "Class balance",
+          "status": "warning",
+          "detail": "Top class 0 is 67.2%; minority class 1 is 32.8%."
+        },
+        {
+          "label": "Accuracy gap",
+          "status": "good",
+          "detail": "Raw accuracy and balanced accuracy are close."
+        },
+        {
+          "label": "Feature cleanup",
+          "status": "good",
+          "detail": "Removed 1 noisy/ID-like feature(s) before training."
+        }
+      ],
+      "actions": [
+        "Use the balanced/oversampled models near the top of the leaderboard when minority recall matters."
+      ]
+    },
+    "next_actions": [
+      "Add features that separate actual '1' from predicted '0'.",
+      "Keep identifier-like columns out of training unless they carry real behavioral signal.",
+      "Top models are very close; retrain after adding rows to confirm the winner."
+    ],
+    "prediction_api": "/api/predict/fc76c659a8044b7fab4cbf5eb54b0d59",
+    "created_at": "2026-06-24T05:11:00Z"
+  },
+  {
+    "model_id": "464f3bd3b7054a748620e58dbc33e410",
+    "dataset_id": "tuning-test",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "best_model": "AdaBoost Classifier",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9662,
+    "quality_label": "excellent",
+    "holdout_metrics": {
+      "accuracy": 0.9444,
+      "balanced_accuracy": 0.9167,
+      "precision_weighted": 0.9487,
+      "recall_weighted": 0.9444,
+      "f1_weighted": 0.943
+    },
+    "baseline_metrics": {
+      "strategy": "always predict 0",
+      "accuracy": 0.6667,
+      "balanced_accuracy": 0.5,
+      "f1_weighted": 0.5333
+    },
+    "candidate_models": 18,
+    "trained_models": 18,
+    "failed_models": 0,
+    "raw_feature_count": 13,
+    "model_feature_count": 12,
+    "selected_feature_count": 13,
+    "excluded_feature_count": 0,
+    "dropped_feature_count": 1,
+    "engineered_feature_count": 0,
+    "recommended_threshold": 0.5,
+    "tuning_studio": {
+      "available": true,
+      "selected_models": [
+        "AdaBoost Classifier",
+        "Gradient Boosting Tuned Classifier",
+        "Histogram Gradient Boosting Classifier"
+      ],
+      "results": [
+        {
+          "model_name": "AdaBoost Classifier",
+          "status": "no_gain",
+          "base_score": 0.9662,
+          "tuned_score": 0.8996,
+          "holdout_score": 0.943,
+          "improvement": -0.0666,
+          "trials": 8,
+          "best_params": {
+            "learning_rate": 0.05,
+            "n_estimators": 120
+          },
+          "metrics": {
+            "accuracy": 0.9444,
+            "balanced_accuracy": 0.9167,
+            "precision_weighted": 0.9487,
+            "recall_weighted": 0.9444,
+            "f1_weighted": 0.943
+          },
+          "cross_validation": {
+            "available": true,
+            "metric": "f1_weighted",
+            "folds": 5,
+            "mean": 0.8996,
+            "std": 0.0972
+          }
+        },
+        {
+          "model_name": "Gradient Boosting Tuned Classifier",
+          "status": "no_gain",
+          "base_score": 0.9605,
+          "tuned_score": 0.9603,
+          "holdout_score": 0.943,
+          "improvement": -0.0002,
+          "trials": 8,
+          "best_params": {
+            "learning_rate": 0.035,
+            "max_depth": 2,
+            "n_estimators": 120
+          },
+          "metrics": {
+            "accuracy": 0.9444,
+            "balanced_accuracy": 0.9167,
+            "precision_weighted": 0.9487,
+            "recall_weighted": 0.9444,
+            "f1_weighted": 0.943
+          },
+          "cross_validation": {
+            "available": true,
+            "metric": "f1_weighted",
+            "folds": 5,
+            "mean": 0.9603,
+            "std": 0.0141
+          }
+        },
+        {
+          "model_name": "Histogram Gradient Boosting Classifier",
+          "status": "improved",
+          "base_score": 0.9553,
+          "tuned_score": 0.9662,
+          "holdout_score": 0.943,
+          "improvement": 0.0109,
+          "trials": 4,
+          "best_params": {
+            "learning_rate": 0.045,
+            "max_iter": 120
+          },
+          "metrics": {
+            "accuracy": 0.9444,
+            "balanced_accuracy": 0.9167,
+            "precision_weighted": 0.9487,
+            "recall_weighted": 0.9444,
+            "f1_weighted": 0.943
+          },
+          "cross_validation": {
+            "available": true,
+            "metric": "f1_weighted",
+            "folds": 5,
+            "mean": 0.9662,
+            "std": 0.0211
+          }
+        }
+      ],
+      "tuned_count": 3,
+      "improved_count": 1,
+      "saved_tuned_model": false,
+      "best_tuned_model": null
+    },
+    "class_balance": {
+      "available": true,
+      "severity": "mild",
+      "class_count": 2,
+      "majority_class": "0",
+      "minority_class": "1",
+      "majority_count": 121,
+      "minority_count": 59,
+      "majority_share": 0.6722,
+      "minority_share": 0.3278,
+      "imbalance_ratio": 2.05,
+      "classes": [
+        {
+          "label": "0",
+          "count": 121,
+          "share": 0.6722
+        },
+        {
+          "label": "1",
+          "count": 59,
+          "share": 0.3278
+        }
+      ]
+    },
+    "accuracy_improver": {
+      "available": true,
+      "kind": "classification",
+      "status": "needs_attention",
+      "summary": "Best classifier is AdaBoost Classifier with weighted F1 0.943 and accuracy 0.9444.",
+      "best_model": "AdaBoost Classifier",
+      "checks": [
+        {
+          "label": "Model signal",
+          "status": "good",
+          "detail": "Best model beats baseline by 0.4097 weighted F1."
+        },
+        {
+          "label": "Class balance",
+          "status": "warning",
+          "detail": "Top class 0 is 67.2%; minority class 1 is 32.8%."
+        },
+        {
+          "label": "Accuracy gap",
+          "status": "good",
+          "detail": "Raw accuracy and balanced accuracy are close."
+        },
+        {
+          "label": "Feature cleanup",
+          "status": "good",
+          "detail": "Removed 1 noisy/ID-like feature(s) before training."
+        }
+      ],
+      "actions": [
+        "Use the balanced/oversampled models near the top of the leaderboard when minority recall matters."
+      ]
+    },
+    "next_actions": [
+      "Add features that separate actual '1' from predicted '0'.",
+      "Keep identifier-like columns out of training unless they carry real behavioral signal.",
+      "Top models are very close; retrain after adding rows to confirm the winner."
+    ],
+    "prediction_api": "/api/predict/464f3bd3b7054a748620e58dbc33e410",
+    "created_at": "2026-06-24T05:08:48Z"
+  },
+  {
+    "model_id": "8805019e40df465a9a7723ab23d70223",
+    "dataset_id": "4b4fa575eb3e49128c8f4a6286f71389",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "best_model": "AdaBoost Classifier",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9662,
+    "quality_label": "excellent",
+    "holdout_metrics": {
+      "accuracy": 0.9444,
+      "balanced_accuracy": 0.9167,
+      "precision_weighted": 0.9487,
+      "recall_weighted": 0.9444,
+      "f1_weighted": 0.943
+    },
+    "baseline_metrics": {
+      "strategy": "always predict 0",
+      "accuracy": 0.6667,
+      "balanced_accuracy": 0.5,
+      "f1_weighted": 0.5333
+    },
+    "candidate_models": 18,
+    "trained_models": 18,
+    "failed_models": 0,
+    "raw_feature_count": 13,
+    "model_feature_count": 12,
+    "selected_feature_count": 13,
+    "excluded_feature_count": 0,
+    "dropped_feature_count": 1,
+    "engineered_feature_count": 0,
+    "recommended_threshold": 0.5,
+    "class_balance": {
+      "available": true,
+      "severity": "mild",
+      "class_count": 2,
+      "majority_class": "0",
+      "minority_class": "1",
+      "majority_count": 121,
+      "minority_count": 59,
+      "majority_share": 0.6722,
+      "minority_share": 0.3278,
+      "imbalance_ratio": 2.05,
+      "classes": [
+        {
+          "label": "0",
+          "count": 121,
+          "share": 0.6722
+        },
+        {
+          "label": "1",
+          "count": 59,
+          "share": 0.3278
+        }
+      ]
+    },
+    "accuracy_improver": {
+      "available": true,
+      "kind": "classification",
+      "status": "needs_attention",
+      "summary": "Best classifier is AdaBoost Classifier with weighted F1 0.943 and accuracy 0.9444.",
+      "best_model": "AdaBoost Classifier",
+      "checks": [
+        {
+          "label": "Model signal",
+          "status": "good",
+          "detail": "Best model beats baseline by 0.4097 weighted F1."
+        },
+        {
+          "label": "Class balance",
+          "status": "warning",
+          "detail": "Top class 0 is 67.2%; minority class 1 is 32.8%."
+        },
+        {
+          "label": "Accuracy gap",
+          "status": "good",
+          "detail": "Raw accuracy and balanced accuracy are close."
+        },
+        {
+          "label": "Feature cleanup",
+          "status": "good",
+          "detail": "Removed 1 noisy/ID-like feature(s) before training."
+        }
+      ],
+      "actions": [
+        "Use the balanced/oversampled models near the top of the leaderboard when minority recall matters."
+      ]
+    },
+    "next_actions": [
+      "Add features that separate actual '1' from predicted '0'.",
+      "Keep identifier-like columns out of training unless they carry real behavioral signal.",
+      "Top models are very close; retrain after adding rows to confirm the winner."
+    ],
+    "prediction_api": "/api/predict/8805019e40df465a9a7723ab23d70223",
+    "created_at": "2026-06-24T04:56:42Z"
+  },
+  {
+    "model_id": "27ac96be61504b73b3c840190e6e4846",
+    "dataset_id": "local-test",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "best_model": "AdaBoost Classifier",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9662,
+    "quality_label": "excellent",
+    "holdout_metrics": {
+      "accuracy": 0.9444,
+      "balanced_accuracy": 0.9167,
+      "precision_weighted": 0.9487,
+      "recall_weighted": 0.9444,
+      "f1_weighted": 0.943
+    },
+    "baseline_metrics": {
+      "strategy": "always predict 0",
+      "accuracy": 0.6667,
+      "balanced_accuracy": 0.5,
+      "f1_weighted": 0.5333
+    },
+    "candidate_models": 18,
+    "trained_models": 18,
+    "failed_models": 0,
+    "raw_feature_count": 13,
+    "model_feature_count": 12,
+    "selected_feature_count": 13,
+    "excluded_feature_count": 0,
+    "dropped_feature_count": 1,
+    "engineered_feature_count": 0,
+    "recommended_threshold": 0.5,
+    "class_balance": {
+      "available": true,
+      "severity": "mild",
+      "class_count": 2,
+      "majority_class": "0",
+      "minority_class": "1",
+      "majority_count": 121,
+      "minority_count": 59,
+      "majority_share": 0.6722,
+      "minority_share": 0.3278,
+      "imbalance_ratio": 2.05,
+      "classes": [
+        {
+          "label": "0",
+          "count": 121,
+          "share": 0.6722
+        },
+        {
+          "label": "1",
+          "count": 59,
+          "share": 0.3278
+        }
+      ]
+    },
+    "accuracy_improver": {
+      "available": true,
+      "kind": "classification",
+      "status": "needs_attention",
+      "summary": "Best classifier is AdaBoost Classifier with weighted F1 0.943 and accuracy 0.9444.",
+      "best_model": "AdaBoost Classifier",
+      "checks": [
+        {
+          "label": "Model signal",
+          "status": "good",
+          "detail": "Best model beats baseline by 0.4097 weighted F1."
+        },
+        {
+          "label": "Class balance",
+          "status": "warning",
+          "detail": "Top class 0 is 67.2%; minority class 1 is 32.8%."
+        },
+        {
+          "label": "Accuracy gap",
+          "status": "good",
+          "detail": "Raw accuracy and balanced accuracy are close."
+        },
+        {
+          "label": "Feature cleanup",
+          "status": "good",
+          "detail": "Removed 1 noisy/ID-like feature(s) before training."
+        }
+      ],
+      "actions": [
+        "Use the balanced/oversampled models near the top of the leaderboard when minority recall matters."
+      ]
+    },
+    "next_actions": [
+      "Add features that separate actual '1' from predicted '0'.",
+      "Keep identifier-like columns out of training unless they carry real behavioral signal.",
+      "Top models are very close; retrain after adding rows to confirm the winner."
+    ],
+    "prediction_api": "/api/predict/27ac96be61504b73b3c840190e6e4846",
+    "created_at": "2026-06-24T04:54:19Z"
+  },
+  {
+    "model_id": "b098f18f4ad84109a9d24bdb23ee0f06",
+    "dataset_id": "17f798188d9f48858d685b56710a9b26",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "best_model": "Gradient Boosting Classifier",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9338,
+    "prediction_api": "/api/predict/b098f18f4ad84109a9d24bdb23ee0f06",
+    "created_at": "2026-06-22T11:46:41Z"
+  },
+  {
+    "model_id": "a447f8f0fe6c4f6c9bffe4d39cb06918",
+    "dataset_id": "ffe10e92e39545208b111ea27d13d57e",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "best_model": "Gradient Boosting Classifier",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9338,
+    "prediction_api": "/api/predict/a447f8f0fe6c4f6c9bffe4d39cb06918",
+    "created_at": "2026-06-22T11:37:12Z"
+  },
+  {
+    "model_id": "ae31e21e54684a94b3a0180a84d07584",
+    "dataset_id": "4504a84e4e9f4e69b385d3d616028fdd",
+    "target_column": "next_month_sales",
+    "problem_type": "regression",
+    "best_model": "Ridge Regression",
+    "primary_metric": "r2",
+    "rank_score": 0.9696,
+    "prediction_api": "/api/predict/ae31e21e54684a94b3a0180a84d07584",
+    "created_at": "2026-06-22T06:22:23Z"
+  },
+  {
+    "model_id": "adbf1541424c4609b5b002535540e3ff",
+    "dataset_id": "14ec8d54590f41cd9e8cbb3273010324",
+    "target_column": "store_id",
+    "problem_type": "classification",
+    "best_model": "Gradient Boosting Classifier",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.7195,
+    "prediction_api": "/api/predict/adbf1541424c4609b5b002535540e3ff",
+    "created_at": "2026-06-22T06:00:02Z"
+  },
+  {
+    "model_id": "3d94dd6e35db481b9e3f2c32d74dfe2b",
+    "dataset_id": "bed7fffae71641abbe2a7c942093b385",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "best_model": "Gradient Boosting Classifier",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9497,
+    "prediction_api": "/api/predict/3d94dd6e35db481b9e3f2c32d74dfe2b",
+    "created_at": "2026-06-22T05:38:59Z"
+  },
+  {
+    "model_id": "8aa9d418a4d14123b800a7f239c0a69e",
+    "dataset_id": "67f20a7f1025467eac19890e9535e953",
+    "target_column": "age",
+    "problem_type": "regression",
+    "best_model": "Ridge Regression",
+    "primary_metric": "r2",
+    "rank_score": 0.138,
+    "prediction_api": "/api/predict/8aa9d418a4d14123b800a7f239c0a69e",
+    "created_at": "2026-06-19T10:03:41Z"
+  },
+  {
+    "model_id": "0de98c8d6b784b0baa5347cca523985a",
+    "dataset_id": "67f20a7f1025467eac19890e9535e953",
+    "target_column": "age",
+    "problem_type": "regression",
+    "best_model": "Ridge Regression",
+    "primary_metric": "r2",
+    "rank_score": 0.138,
+    "prediction_api": "/api/predict/0de98c8d6b784b0baa5347cca523985a",
+    "created_at": "2026-06-19T10:03:38Z"
+  },
+  {
+    "model_id": "fdff3c61da5c40fb8c29223c2a100fef",
+    "dataset_id": "0ba75c80e677410c8f4efe091b0a84c9",
+    "target_column": "age",
+    "problem_type": "regression",
+    "best_model": "Ridge Regression",
+    "primary_metric": "r2",
+    "rank_score": 0.138,
+    "prediction_api": "/api/predict/fdff3c61da5c40fb8c29223c2a100fef",
+    "created_at": "2026-06-19T07:34:42Z"
+  },
+  {
+    "model_id": "c7af929eafb14649a52eb750c659bb5b",
+    "dataset_id": "0feb201ce67d4aabba0dcf52b16e2c54",
+    "target_column": "age",
+    "problem_type": "regression",
+    "best_model": "Ridge Regression",
+    "primary_metric": "r2",
+    "rank_score": 0.138,
+    "prediction_api": "/api/predict/c7af929eafb14649a52eb750c659bb5b",
+    "created_at": "2026-06-19T07:31:18Z"
+  },
+  {
+    "model_id": "d927ebca07154da0995d8b164c2a5715",
+    "dataset_id": "7eef2cfa48974db993b40b5f56b96ae2",
+    "target_column": "age",
+    "problem_type": "regression",
+    "best_model": "Ridge Regression",
+    "primary_metric": "r2",
+    "rank_score": 0.138,
+    "prediction_api": "/api/predict/d927ebca07154da0995d8b164c2a5715",
+    "created_at": "2026-06-19T07:30:53Z"
+  },
+  {
+    "model_id": "533c806caef7471ebb0ec3bcfe720bb3",
+    "dataset_id": "ac28fb038f13464f97c2a2eedbbb3c52",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "best_model": "Gradient Boosting Classifier",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9338,
+    "prediction_api": "/api/predict/533c806caef7471ebb0ec3bcfe720bb3",
+    "created_at": "2026-06-19T07:26:45Z"
+  }
+]

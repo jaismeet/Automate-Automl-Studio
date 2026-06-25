@@ -1,0 +1,54 @@
+[
+  {
+    "key": "audit_coverage_low",
+    "level": "warning",
+    "title": "Audit coverage is low",
+    "detail": "Run a batch prediction before production handoff.",
+    "action": "Run single-row and batch predictions to build audit coverage.",
+    "source": "audit",
+    "alert_id": "456a3fd93fa74a13bf082d994f9d105f",
+    "model_id": "f2e9279fdfa84b04afd9e2fcd989bbad",
+    "status": "active",
+    "created_at": "2026-06-24T10:05:57Z",
+    "last_seen": "2026-06-24T11:16:41Z"
+  },
+  {
+    "key": "confidence_low",
+    "level": "warning",
+    "title": "Prediction confidence is weak",
+    "detail": "Run what-if or batch predictions to capture confidence signals.",
+    "action": "Run what-if tests, tune threshold, or retrain with more labeled examples.",
+    "source": "confidence",
+    "alert_id": "b602144c42e144219665878d37778ae7",
+    "model_id": "f2e9279fdfa84b04afd9e2fcd989bbad",
+    "status": "active",
+    "created_at": "2026-06-24T10:05:57Z",
+    "last_seen": "2026-06-24T11:16:41Z"
+  },
+  {
+    "key": "drift_review",
+    "level": "warning",
+    "title": "Dataset drift needs review",
+    "detail": "No drift check has been run for this model yet.",
+    "action": "Run a drift check with a recent scoring dataset.",
+    "source": "drift",
+    "alert_id": "6ee7071a78634f768a3f07bbf6b03020",
+    "model_id": "f2e9279fdfa84b04afd9e2fcd989bbad",
+    "status": "active",
+    "created_at": "2026-06-24T10:05:57Z",
+    "last_seen": "2026-06-24T11:16:41Z"
+  },
+  {
+    "key": "monitoring_watch",
+    "level": "warning",
+    "title": "Model needs monitoring review",
+    "detail": "0 low-confidence row(s) are present in prediction audits.",
+    "action": "Tune the threshold, review weak classes, or retrain with more examples.",
+    "source": "monitoring",
+    "alert_id": "1926e7bce798444da608d14e3f05310a",
+    "model_id": "f2e9279fdfa84b04afd9e2fcd989bbad",
+    "status": "active",
+    "created_at": "2026-06-24T10:05:57Z",
+    "last_seen": "2026-06-24T11:16:41Z"
+  }
+]

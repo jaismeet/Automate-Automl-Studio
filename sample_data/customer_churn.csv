@@ -1,0 +1,181 @@
+customer_id,age,tenure_months,city,plan,contract_type,internet_service,monthly_charges,total_charges,support_tickets,satisfaction_score,last_login_days,payment_method,churn
+C0001,27,7,Bangalore,Basic,Annual,Mobile,620,4515,3,7,21,UPI,0
+C0002,34,12,Chennai,Pro,Monthly,DSL,1681,20522,8,1,50,Debit Card,1
+C0003,41,17,Pune,Basic,Annual,Fiber,662,11779,0,10,27,Net Banking,0
+C0004,48,22,Hyderabad,Pro,Two year,Mobile,1723,38606,5,6,56,Credit Card,0
+C0005,55,27,Delhi,Basic,Annual,DSL,704,19883,6,5,69,Net Banking,1
+C0006,62,32,Kolkata,Pro,Two year,Fiber,1765,57530,2,9,62,UPI,0
+C0007,26,37,Ahmedabad,Basic,Annual,Mobile,746,28827,3,9,0,Debit Card,0
+C0008,33,42,Mumbai,Pro,Two year,DSL,1807,77294,8,4,29,UPI,0
+C0009,40,47,Bangalore,Basic,Monthly,Fiber,788,37036,0,10,6,Credit Card,0
+C0010,47,52,Chennai,Pro,Two year,Mobile,1849,96323,5,7,35,Net Banking,0
+C0011,54,57,Pune,Basic,Monthly,DSL,830,47660,6,6,48,Credit Card,1
+C0012,61,2,Hyderabad,Pro,Monthly,Fiber,1891,4307,2,7,41,Debit Card,1
+C0013,25,7,Delhi,Basic,Annual,Mobile,872,6804,3,7,54,UPI,0
+C0014,32,12,Kolkata,Pro,Monthly,DSL,1933,24071,8,1,8,Debit Card,1
+C0015,39,17,Ahmedabad,Basic,Annual,Fiber,914,16588,0,10,60,Net Banking,0
+C0016,46,22,Mumbai,Pro,Two year,Mobile,1975,44675,5,6,14,Credit Card,0
+C0017,53,27,Bangalore,Basic,Annual,DSL,599,17573,6,5,27,Net Banking,1
+C0018,60,32,Chennai,Pro,Two year,Fiber,1660,53120,2,9,20,UPI,0
+C0019,24,37,Pune,Basic,Annual,Mobile,641,23892,3,9,33,Debit Card,0
+C0020,31,42,Hyderabad,Pro,Two year,DSL,1702,71834,8,4,62,UPI,1
+C0021,38,47,Delhi,Basic,Monthly,Fiber,683,32626,0,10,39,Credit Card,0
+C0022,45,52,Kolkata,Pro,Two year,Mobile,1744,91388,5,7,68,Net Banking,1
+C0023,52,57,Ahmedabad,Basic,Monthly,DSL,725,42200,6,6,6,Credit Card,0
+C0024,59,2,Mumbai,Pro,Monthly,Fiber,1786,4622,2,7,74,Debit Card,1
+C0025,23,7,Bangalore,Basic,Annual,Mobile,767,6594,3,7,12,UPI,0
+C0026,30,12,Chennai,Pro,Monthly,DSL,1828,23336,8,1,41,Debit Card,1
+C0027,37,17,Pune,Basic,Annual,Fiber,809,13753,0,10,18,Net Banking,0
+C0028,44,22,Hyderabad,Pro,Two year,Mobile,1870,41315,5,6,47,Credit Card,0
+C0029,51,27,Delhi,Basic,Annual,DSL,851,23327,6,5,60,Net Banking,1
+C0030,58,32,Kolkata,Pro,Two year,Fiber,1912,61709,2,9,53,UPI,0
+C0031,22,37,Ahmedabad,Basic,Annual,Mobile,893,33741,3,9,66,Debit Card,0
+C0032,29,42,Mumbai,Pro,Two year,DSL,1954,82943,8,4,20,UPI,0
+C0033,36,47,Bangalore,Basic,Monthly,Fiber,935,44995,0,10,72,Credit Card,1
+C0034,43,52,Chennai,Pro,Two year,Mobile,1639,86453,5,7,26,Net Banking,0
+C0035,50,57,Pune,Basic,Monthly,DSL,620,36740,6,6,39,Credit Card,1
+C0036,57,2,Hyderabad,Pro,Monthly,Fiber,1681,3362,2,7,32,Debit Card,0
+C0037,21,7,Delhi,Basic,Annual,Mobile,662,4809,3,7,45,UPI,0
+C0038,28,12,Kolkata,Pro,Monthly,DSL,1723,21026,8,1,74,Debit Card,1
+C0039,35,17,Ahmedabad,Basic,Annual,Fiber,704,12493,0,10,51,Net Banking,0
+C0040,42,22,Mumbai,Pro,Two year,Mobile,1765,39530,5,6,5,Credit Card,0
+C0041,49,27,Bangalore,Basic,Annual,DSL,746,21017,6,5,18,Net Banking,1
+C0042,56,32,Chennai,Pro,Two year,Fiber,1807,58874,2,9,11,UPI,0
+C0043,20,37,Pune,Basic,Annual,Mobile,788,30381,3,9,24,Debit Card,0
+C0044,27,42,Hyderabad,Pro,Two year,DSL,1849,79058,8,4,53,UPI,1
+C0045,34,47,Delhi,Basic,Monthly,Fiber,830,39010,0,10,30,Credit Card,0
+C0046,41,52,Kolkata,Pro,Two year,Mobile,1891,98507,5,7,59,Net Banking,0
+C0047,48,57,Ahmedabad,Basic,Monthly,DSL,872,50054,6,6,72,Credit Card,1
+C0048,55,2,Mumbai,Pro,Monthly,Fiber,1933,4391,2,7,65,Debit Card,1
+C0049,62,7,Bangalore,Basic,Annual,Mobile,914,7098,3,7,3,UPI,0
+C0050,26,12,Chennai,Pro,Monthly,DSL,1975,24575,8,1,32,Debit Card,1
+C0051,33,17,Pune,Basic,Annual,Fiber,599,11233,0,10,9,Net Banking,0
+C0052,40,22,Hyderabad,Pro,Two year,Mobile,1660,37745,5,6,38,Credit Card,0
+C0053,47,27,Delhi,Basic,Annual,DSL,641,18707,6,5,51,Net Banking,1
+C0054,54,32,Kolkata,Pro,Two year,Fiber,1702,54464,2,9,44,UPI,0
+C0055,61,37,Ahmedabad,Basic,Annual,Mobile,683,25446,3,9,57,Debit Card,0
+C0056,25,42,Mumbai,Pro,Two year,DSL,1744,73598,8,4,11,UPI,0
+C0057,32,47,Bangalore,Basic,Monthly,Fiber,725,34600,0,10,63,Credit Card,0
+C0058,39,52,Chennai,Pro,Two year,Mobile,1786,93572,5,7,17,Net Banking,0
+C0059,46,57,Pune,Basic,Monthly,DSL,767,44594,6,6,30,Credit Card,0
+C0060,53,2,Hyderabad,Pro,Monthly,Fiber,1828,4706,2,7,23,Debit Card,0
+C0061,60,7,Delhi,Basic,Annual,Mobile,809,6888,3,7,36,UPI,0
+C0062,24,12,Kolkata,Pro,Monthly,DSL,1870,23840,8,1,65,Debit Card,1
+C0063,31,17,Ahmedabad,Basic,Annual,Fiber,851,14467,0,10,42,Net Banking,0
+C0064,38,22,Mumbai,Pro,Two year,Mobile,1912,42239,5,6,71,Credit Card,0
+C0065,45,27,Bangalore,Basic,Annual,DSL,893,24461,6,5,9,Net Banking,1
+C0066,52,32,Chennai,Pro,Two year,Fiber,1954,63053,2,9,2,UPI,0
+C0067,59,37,Pune,Basic,Annual,Mobile,935,35295,3,9,15,Debit Card,0
+C0068,23,42,Hyderabad,Pro,Two year,DSL,1639,69713,8,4,44,UPI,1
+C0069,30,47,Delhi,Basic,Monthly,Fiber,620,30190,0,10,21,Credit Card,0
+C0070,37,52,Kolkata,Pro,Two year,Mobile,1681,88637,5,7,50,Net Banking,0
+C0071,44,57,Ahmedabad,Basic,Monthly,DSL,662,39134,6,6,63,Credit Card,1
+C0072,51,2,Mumbai,Pro,Monthly,Fiber,1723,3446,2,7,56,Debit Card,1
+C0073,58,7,Bangalore,Basic,Annual,Mobile,704,5103,3,7,69,UPI,0
+C0074,22,12,Chennai,Pro,Monthly,DSL,1765,21530,8,1,23,Debit Card,1
+C0075,29,17,Pune,Basic,Annual,Fiber,746,13207,0,10,0,Net Banking,0
+C0076,36,22,Hyderabad,Pro,Two year,Mobile,1807,40454,5,6,29,Credit Card,0
+C0077,43,27,Delhi,Basic,Annual,DSL,788,22151,6,5,42,Net Banking,1
+C0078,50,32,Kolkata,Pro,Two year,Fiber,1849,60218,2,9,35,UPI,0
+C0079,57,37,Ahmedabad,Basic,Annual,Mobile,830,31935,3,9,48,Debit Card,0
+C0080,21,42,Mumbai,Pro,Two year,DSL,1891,80822,8,4,2,UPI,0
+C0081,28,47,Bangalore,Basic,Monthly,Fiber,872,40984,0,10,54,Credit Card,0
+C0082,35,52,Chennai,Pro,Two year,Mobile,1933,100691,5,7,8,Net Banking,0
+C0083,42,57,Pune,Basic,Monthly,DSL,914,52448,6,6,21,Credit Card,0
+C0084,49,2,Hyderabad,Pro,Monthly,Fiber,1975,4475,2,7,14,Debit Card,0
+C0085,56,7,Delhi,Basic,Annual,Mobile,599,4893,3,7,27,UPI,0
+C0086,20,12,Kolkata,Pro,Monthly,DSL,1660,20795,8,1,56,Debit Card,1
+C0087,27,17,Ahmedabad,Basic,Annual,Fiber,641,11947,0,10,33,Net Banking,0
+C0088,34,22,Mumbai,Pro,Two year,Mobile,1702,38669,5,6,62,Credit Card,0
+C0089,41,27,Bangalore,Basic,Annual,DSL,683,19841,6,5,0,Net Banking,1
+C0090,48,32,Chennai,Pro,Two year,Fiber,1744,55808,2,9,68,UPI,0
+C0091,55,37,Pune,Basic,Annual,Mobile,725,27000,3,9,6,Debit Card,0
+C0092,62,42,Hyderabad,Pro,Two year,DSL,1786,75362,8,4,35,UPI,0
+C0093,26,47,Delhi,Basic,Monthly,Fiber,767,36574,0,10,12,Credit Card,0
+C0094,33,52,Kolkata,Pro,Two year,Mobile,1828,95756,5,7,41,Net Banking,0
+C0095,40,57,Ahmedabad,Basic,Monthly,DSL,809,46988,6,6,54,Credit Card,1
+C0096,47,2,Mumbai,Pro,Monthly,Fiber,1870,4790,2,7,47,Debit Card,1
+C0097,54,7,Bangalore,Basic,Annual,Mobile,851,7182,3,7,60,UPI,0
+C0098,61,12,Chennai,Pro,Monthly,DSL,1912,24344,8,1,14,Debit Card,1
+C0099,25,17,Pune,Basic,Annual,Fiber,893,15181,0,10,66,Net Banking,0
+C0100,32,22,Hyderabad,Pro,Two year,Mobile,1954,43163,5,6,20,Credit Card,0
+C0101,39,27,Delhi,Basic,Annual,DSL,935,25595,6,5,33,Net Banking,1
+C0102,46,32,Kolkata,Pro,Two year,Fiber,1639,52973,2,9,26,UPI,0
+C0103,53,37,Ahmedabad,Basic,Annual,Mobile,620,23640,3,9,39,Debit Card,0
+C0104,60,42,Mumbai,Pro,Two year,DSL,1681,71477,8,4,68,UPI,1
+C0105,24,47,Bangalore,Basic,Monthly,Fiber,662,32164,0,10,45,Credit Card,0
+C0106,31,52,Chennai,Pro,Two year,Mobile,1723,90821,5,7,74,Net Banking,0
+C0107,38,57,Pune,Basic,Monthly,DSL,704,41528,6,6,12,Credit Card,0
+C0108,45,2,Hyderabad,Pro,Monthly,Fiber,1765,3530,2,7,5,Debit Card,0
+C0109,52,7,Delhi,Basic,Annual,Mobile,746,5397,3,7,18,UPI,0
+C0110,59,12,Kolkata,Pro,Monthly,DSL,1807,22034,8,1,47,Debit Card,1
+C0111,23,17,Ahmedabad,Basic,Annual,Fiber,788,13921,0,10,24,Net Banking,0
+C0112,30,22,Mumbai,Pro,Two year,Mobile,1849,41378,5,6,53,Credit Card,0
+C0113,37,27,Bangalore,Basic,Annual,DSL,830,23285,6,5,66,Net Banking,1
+C0114,44,32,Chennai,Pro,Two year,Fiber,1891,61562,2,9,59,UPI,0
+C0115,51,37,Pune,Basic,Annual,Mobile,872,33489,3,9,72,Debit Card,0
+C0116,58,42,Hyderabad,Pro,Two year,DSL,1933,82586,8,4,26,UPI,0
+C0117,22,47,Delhi,Basic,Monthly,Fiber,914,42958,0,10,3,Credit Card,0
+C0118,29,52,Kolkata,Pro,Two year,Mobile,1975,102875,5,7,32,Net Banking,0
+C0119,36,57,Ahmedabad,Basic,Monthly,DSL,599,34493,6,6,45,Credit Card,1
+C0120,43,2,Mumbai,Pro,Monthly,Fiber,1660,3845,2,7,38,Debit Card,1
+C0121,50,7,Bangalore,Basic,Annual,Mobile,641,5187,3,7,51,UPI,0
+C0122,57,12,Chennai,Pro,Monthly,DSL,1702,21299,8,1,5,Debit Card,1
+C0123,21,17,Pune,Basic,Annual,Fiber,683,12661,0,10,57,Net Banking,0
+C0124,28,22,Hyderabad,Pro,Two year,Mobile,1744,39593,5,6,11,Credit Card,0
+C0125,35,27,Delhi,Basic,Annual,DSL,725,20975,6,5,24,Net Banking,1
+C0126,42,32,Kolkata,Pro,Two year,Fiber,1786,57152,2,9,17,UPI,0
+C0127,49,37,Ahmedabad,Basic,Annual,Mobile,767,28554,3,9,30,Debit Card,0
+C0128,56,42,Mumbai,Pro,Two year,DSL,1828,77126,8,4,59,UPI,1
+C0129,20,47,Bangalore,Basic,Monthly,Fiber,809,38548,0,10,36,Credit Card,0
+C0130,27,52,Chennai,Pro,Two year,Mobile,1870,97940,5,7,65,Net Banking,0
+C0131,34,57,Pune,Basic,Monthly,DSL,851,49382,6,6,3,Credit Card,0
+C0132,41,2,Hyderabad,Pro,Monthly,Fiber,1912,4874,2,7,71,Debit Card,1
+C0133,48,7,Delhi,Basic,Annual,Mobile,893,7476,3,7,9,UPI,0
+C0134,55,12,Kolkata,Pro,Monthly,DSL,1954,24848,8,1,38,Debit Card,1
+C0135,62,17,Ahmedabad,Basic,Annual,Fiber,935,15895,0,10,15,Net Banking,0
+C0136,26,22,Mumbai,Pro,Two year,Mobile,1639,36233,5,6,44,Credit Card,0
+C0137,33,27,Bangalore,Basic,Annual,DSL,620,17090,6,5,57,Net Banking,1
+C0138,40,32,Chennai,Pro,Two year,Fiber,1681,54317,2,9,50,UPI,0
+C0139,47,37,Pune,Basic,Annual,Mobile,662,25194,3,9,63,Debit Card,0
+C0140,54,42,Hyderabad,Pro,Two year,DSL,1723,73241,8,4,17,UPI,0
+C0141,61,47,Delhi,Basic,Monthly,Fiber,704,34138,0,10,69,Credit Card,0
+C0142,25,52,Kolkata,Pro,Two year,Mobile,1765,93005,5,7,23,Net Banking,0
+C0143,32,57,Ahmedabad,Basic,Monthly,DSL,746,43922,6,6,36,Credit Card,1
+C0144,39,2,Mumbai,Pro,Monthly,Fiber,1807,3614,2,7,29,Debit Card,0
+C0145,46,7,Bangalore,Basic,Annual,Mobile,788,5691,3,7,42,UPI,0
+C0146,53,12,Chennai,Pro,Monthly,DSL,1849,22538,8,1,71,Debit Card,1
+C0147,60,17,Pune,Basic,Annual,Fiber,830,14635,0,10,48,Net Banking,0
+C0148,24,22,Hyderabad,Pro,Two year,Mobile,1891,42302,5,6,2,Credit Card,0
+C0149,31,27,Delhi,Basic,Annual,DSL,872,24419,6,5,15,Net Banking,1
+C0150,38,32,Kolkata,Pro,Two year,Fiber,1933,62906,2,9,8,UPI,0
+C0151,45,37,Ahmedabad,Basic,Annual,Mobile,914,35043,3,9,21,Debit Card,0
+C0152,52,42,Mumbai,Pro,Two year,DSL,1975,84350,8,4,50,UPI,1
+C0153,59,47,Bangalore,Basic,Monthly,Fiber,599,28153,0,10,27,Credit Card,0
+C0154,23,52,Chennai,Pro,Two year,Mobile,1660,86495,5,7,56,Net Banking,1
+C0155,30,57,Pune,Basic,Monthly,DSL,641,36887,6,6,69,Credit Card,1
+C0156,37,2,Hyderabad,Pro,Monthly,Fiber,1702,3929,2,7,62,Debit Card,1
+C0157,44,7,Delhi,Basic,Annual,Mobile,683,5481,3,7,0,UPI,0
+C0158,51,12,Kolkata,Pro,Monthly,DSL,1744,21803,8,1,29,Debit Card,1
+C0159,58,17,Ahmedabad,Basic,Annual,Fiber,725,13375,0,10,6,Net Banking,0
+C0160,22,22,Mumbai,Pro,Two year,Mobile,1786,40517,5,6,35,Credit Card,0
+C0161,29,27,Bangalore,Basic,Annual,DSL,767,22109,6,5,48,Net Banking,1
+C0162,36,32,Chennai,Pro,Two year,Fiber,1828,58496,2,9,41,UPI,0
+C0163,43,37,Pune,Basic,Annual,Mobile,809,30108,3,9,54,Debit Card,0
+C0164,50,42,Hyderabad,Pro,Two year,DSL,1870,78890,8,4,8,UPI,0
+C0165,57,47,Delhi,Basic,Monthly,Fiber,851,40522,0,10,60,Credit Card,1
+C0166,21,52,Kolkata,Pro,Two year,Mobile,1912,100124,5,7,14,Net Banking,0
+C0167,28,57,Ahmedabad,Basic,Monthly,DSL,893,51776,6,6,27,Credit Card,0
+C0168,35,2,Mumbai,Pro,Monthly,Fiber,1954,4958,2,7,20,Debit Card,0
+C0169,42,7,Bangalore,Basic,Annual,Mobile,935,7770,3,7,33,UPI,0
+C0170,49,12,Chennai,Pro,Monthly,DSL,1639,21068,8,1,62,Debit Card,1
+C0171,56,17,Pune,Basic,Annual,Fiber,620,10540,0,10,39,Net Banking,0
+C0172,20,22,Hyderabad,Pro,Two year,Mobile,1681,37157,5,6,68,Credit Card,0
+C0173,27,27,Delhi,Basic,Annual,DSL,662,18224,6,5,6,Net Banking,1
+C0174,34,32,Kolkata,Pro,Two year,Fiber,1723,55661,2,9,74,UPI,0
+C0175,41,37,Ahmedabad,Basic,Annual,Mobile,704,26748,3,9,12,Debit Card,0
+C0176,48,42,Mumbai,Pro,Two year,DSL,1765,75005,8,4,41,UPI,1
+C0177,55,47,Bangalore,Basic,Monthly,Fiber,746,36112,0,10,18,Credit Card,0
+C0178,62,52,Chennai,Pro,Two year,Mobile,1807,95189,5,7,47,Net Banking,0
+C0179,26,57,Pune,Basic,Monthly,DSL,788,46316,6,6,60,Credit Card,1
+C0180,33,2,Hyderabad,Pro,Monthly,Fiber,1849,3698,2,7,53,Debit Card,1

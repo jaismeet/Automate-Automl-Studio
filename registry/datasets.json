@@ -1,0 +1,434 @@
+[
+  {
+    "dataset_id": "d046c8000684473cb294b669616be92c",
+    "name": "cleaned_customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 13,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\d046c8000684473cb294b669616be92c_cleaned_customer_churn.parquet",
+    "created_at": "2026-06-24T05:53:13Z"
+  },
+  {
+    "dataset_id": "5ed1362667f44c60a145a4ac615c0f57",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\5ed1362667f44c60a145a4ac615c0f57_customer_churn.parquet",
+    "created_at": "2026-06-24T05:53:07Z"
+  },
+  {
+    "dataset_id": "3edd0c846e674e18a7b34b0c7bfb24e6",
+    "name": "leakage_live_test.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 15,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\3edd0c846e674e18a7b34b0c7bfb24e6_leakage_live_test.parquet",
+    "created_at": "2026-06-24T05:23:00Z"
+  },
+  {
+    "dataset_id": "15a71080fd2d47b99db38ae1635a0e4d",
+    "name": "leakage_live_test.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 15,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\15a71080fd2d47b99db38ae1635a0e4d_leakage_live_test.parquet",
+    "created_at": "2026-06-24T05:22:37Z"
+  },
+  {
+    "dataset_id": "76d0e123dfdb49139cec09f7c10a9cf2",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\76d0e123dfdb49139cec09f7c10a9cf2_customer_churn.parquet",
+    "created_at": "2026-06-24T05:10:39Z"
+  },
+  {
+    "dataset_id": "4b4fa575eb3e49128c8f4a6286f71389",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\4b4fa575eb3e49128c8f4a6286f71389_customer_churn.parquet",
+    "created_at": "2026-06-24T04:56:12Z"
+  },
+  {
+    "dataset_id": "8d7f0cf12c584c8c9f7ae73ac74536d9",
+    "name": "cleaned_customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 13,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\8d7f0cf12c584c8c9f7ae73ac74536d9_cleaned_customer_churn.parquet",
+    "created_at": "2026-06-24T04:27:00Z"
+  },
+  {
+    "dataset_id": "82aad372856c4fe3949ece43a9282625",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\82aad372856c4fe3949ece43a9282625_customer_churn.parquet",
+    "created_at": "2026-06-24T04:27:00Z"
+  },
+  {
+    "dataset_id": "17f798188d9f48858d685b56710a9b26",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\17f798188d9f48858d685b56710a9b26_customers.parquet",
+    "created_at": "2026-06-22T11:46:06Z"
+  },
+  {
+    "dataset_id": "40f5bad2dcd14380b9d037b2126d3184",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\40f5bad2dcd14380b9d037b2126d3184_customers.parquet",
+    "created_at": "2026-06-22T11:45:44Z"
+  },
+  {
+    "dataset_id": "839f01f0dac84c21be3dbfb715b3705a",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\839f01f0dac84c21be3dbfb715b3705a_customers.parquet",
+    "created_at": "2026-06-22T11:45:33Z"
+  },
+  {
+    "dataset_id": "eb9bb115343c4421ad734fca8cf793c0",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\eb9bb115343c4421ad734fca8cf793c0_customers.parquet",
+    "created_at": "2026-06-22T11:45:30Z"
+  },
+  {
+    "dataset_id": "3f09c19e3fd54b59ac1fa59973640a33",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\3f09c19e3fd54b59ac1fa59973640a33_customer_churn.parquet",
+    "created_at": "2026-06-22T11:45:29Z"
+  },
+  {
+    "dataset_id": "c0fd169dd6d7426c9f11030917b4b646",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\c0fd169dd6d7426c9f11030917b4b646_customer_churn.parquet",
+    "created_at": "2026-06-22T11:45:25Z"
+  },
+  {
+    "dataset_id": "ffe10e92e39545208b111ea27d13d57e",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\ffe10e92e39545208b111ea27d13d57e_customers.parquet",
+    "created_at": "2026-06-22T11:36:23Z"
+  },
+  {
+    "dataset_id": "2503d7372a744b73838f36986a666e62",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\2503d7372a744b73838f36986a666e62_customer_churn.parquet",
+    "created_at": "2026-06-22T11:36:17Z"
+  },
+  {
+    "dataset_id": "8aae70e3029f470ea55987d62040d433",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\8aae70e3029f470ea55987d62040d433_customers.parquet",
+    "created_at": "2026-06-22T11:36:11Z"
+  },
+  {
+    "dataset_id": "67aed5de5cdd40e98fbe33f39d4ca05c",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\67aed5de5cdd40e98fbe33f39d4ca05c_customer_churn.parquet",
+    "created_at": "2026-06-22T11:36:10Z"
+  },
+  {
+    "dataset_id": "99948d679e7a4bebb0a8885025366f99",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\99948d679e7a4bebb0a8885025366f99_customer_churn.parquet",
+    "created_at": "2026-06-22T11:30:19Z"
+  },
+  {
+    "dataset_id": "bc9f2141455444ab9e4eed05b0ae237b",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\bc9f2141455444ab9e4eed05b0ae237b_customer_churn.parquet",
+    "created_at": "2026-06-22T11:29:37Z"
+  },
+  {
+    "dataset_id": "625816e1fffc4dc4a9ec8e82133d9aa5",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\625816e1fffc4dc4a9ec8e82133d9aa5_customers.parquet",
+    "created_at": "2026-06-22T11:12:11Z"
+  },
+  {
+    "dataset_id": "ea08da42c8cd45638ea5329e24560c33",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\ea08da42c8cd45638ea5329e24560c33_customers.parquet",
+    "created_at": "2026-06-22T10:49:24Z"
+  },
+  {
+    "dataset_id": "49ea7ab2c3074d5f9dc5a4e3412b787d",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\49ea7ab2c3074d5f9dc5a4e3412b787d_customers.parquet",
+    "created_at": "2026-06-22T10:33:30Z"
+  },
+  {
+    "dataset_id": "c5619e3722414fa181022b35cfc1a4fd",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\c5619e3722414fa181022b35cfc1a4fd_customer_churn.parquet",
+    "created_at": "2026-06-22T10:33:27Z"
+  },
+  {
+    "dataset_id": "8bfa1782d23547d78ef1194e5ddeb9ee",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\8bfa1782d23547d78ef1194e5ddeb9ee_customers.parquet",
+    "created_at": "2026-06-22T10:03:54Z"
+  },
+  {
+    "dataset_id": "eede5acd46c143d29fae746e85cefab1",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\eede5acd46c143d29fae746e85cefab1_customers.parquet",
+    "created_at": "2026-06-22T10:03:35Z"
+  },
+  {
+    "dataset_id": "115321bcaa364a8fae59f049d9d076d2",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\115321bcaa364a8fae59f049d9d076d2_customers.parquet",
+    "created_at": "2026-06-22T09:52:53Z"
+  },
+  {
+    "dataset_id": "d5e1b4a4c2a345ed92d2cbcd3579f499",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\d5e1b4a4c2a345ed92d2cbcd3579f499_customer_churn.parquet",
+    "created_at": "2026-06-22T06:27:34Z"
+  },
+  {
+    "dataset_id": "30eebe2fa62141df9b5a85929bdf4355",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\30eebe2fa62141df9b5a85929bdf4355_customer_churn.parquet",
+    "created_at": "2026-06-22T06:27:20Z"
+  },
+  {
+    "dataset_id": "d33836d52b33482eac7289bc12a56c09",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\d33836d52b33482eac7289bc12a56c09_customer_churn.parquet",
+    "created_at": "2026-06-22T06:27:16Z"
+  },
+  {
+    "dataset_id": "1c184ab948454c2991ac802ae9aeb74b",
+    "name": "loan_default.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 12,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\1c184ab948454c2991ac802ae9aeb74b_loan_default.parquet",
+    "created_at": "2026-06-22T06:25:20Z"
+  },
+  {
+    "dataset_id": "1e942a90c67042f7b9f9c28a8adb0fda",
+    "name": "loan_default.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 12,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\1e942a90c67042f7b9f9c28a8adb0fda_loan_default.parquet",
+    "created_at": "2026-06-22T06:25:17Z"
+  },
+  {
+    "dataset_id": "9c369929f2fa4b1da7654a36bb64cd65",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\9c369929f2fa4b1da7654a36bb64cd65_customer_churn.parquet",
+    "created_at": "2026-06-22T06:24:49Z"
+  },
+  {
+    "dataset_id": "c529407e114342f7bf4307836086e022",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\c529407e114342f7bf4307836086e022_customer_churn.parquet",
+    "created_at": "2026-06-22T06:22:57Z"
+  },
+  {
+    "dataset_id": "1792f97a71444841a2ff6f5fb9721aab",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\1792f97a71444841a2ff6f5fb9721aab_customer_churn.parquet",
+    "created_at": "2026-06-22T06:21:57Z"
+  },
+  {
+    "dataset_id": "f80fedf789ac4df18d27adaca3650015",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\f80fedf789ac4df18d27adaca3650015_customer_churn.parquet",
+    "created_at": "2026-06-22T06:21:53Z"
+  },
+  {
+    "dataset_id": "8121e5e831c646b5b2a02fbd16913151",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\8121e5e831c646b5b2a02fbd16913151_customer_churn.parquet",
+    "created_at": "2026-06-22T06:21:47Z"
+  },
+  {
+    "dataset_id": "4504a84e4e9f4e69b385d3d616028fdd",
+    "name": "retail_sales_forecast.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 12,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\4504a84e4e9f4e69b385d3d616028fdd_retail_sales_forecast.parquet",
+    "created_at": "2026-06-22T06:21:32Z"
+  },
+  {
+    "dataset_id": "14ec8d54590f41cd9e8cbb3273010324",
+    "name": "retail_sales_forecast.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 12,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\14ec8d54590f41cd9e8cbb3273010324_retail_sales_forecast.parquet",
+    "created_at": "2026-06-22T05:56:59Z"
+  },
+  {
+    "dataset_id": "7d5c11bc35e244a4aebd34228211afe4",
+    "name": "retail_sales_forecast.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 12,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\7d5c11bc35e244a4aebd34228211afe4_retail_sales_forecast.parquet",
+    "created_at": "2026-06-22T05:56:38Z"
+  },
+  {
+    "dataset_id": "139ae6bbb0f843db8d2cd0e2261512af",
+    "name": "retail_sales_forecast.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 12,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\139ae6bbb0f843db8d2cd0e2261512af_retail_sales_forecast.parquet",
+    "created_at": "2026-06-22T05:41:36Z"
+  },
+  {
+    "dataset_id": "2d7325a5e5e54a31988e664bda092f23",
+    "name": "loan_default.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 12,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\2d7325a5e5e54a31988e664bda092f23_loan_default.parquet",
+    "created_at": "2026-06-22T05:39:25Z"
+  },
+  {
+    "dataset_id": "bed7fffae71641abbe2a7c942093b385",
+    "name": "customer_churn.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 14,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\bed7fffae71641abbe2a7c942093b385_customer_churn.parquet",
+    "created_at": "2026-06-22T05:38:56Z"
+  },
+  {
+    "dataset_id": "67f20a7f1025467eac19890e9535e953",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\67f20a7f1025467eac19890e9535e953_customers.parquet",
+    "created_at": "2026-06-19T10:03:08Z"
+  },
+  {
+    "dataset_id": "0ba75c80e677410c8f4efe091b0a84c9",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\0ba75c80e677410c8f4efe091b0a84c9_customers.parquet",
+    "created_at": "2026-06-19T07:33:41Z"
+  },
+  {
+    "dataset_id": "0feb201ce67d4aabba0dcf52b16e2c54",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\0feb201ce67d4aabba0dcf52b16e2c54_customers.parquet",
+    "created_at": "2026-06-19T07:31:16Z"
+  },
+  {
+    "dataset_id": "7eef2cfa48974db993b40b5f56b96ae2",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\7eef2cfa48974db993b40b5f56b96ae2_customers.parquet",
+    "created_at": "2026-06-19T07:30:51Z"
+  },
+  {
+    "dataset_id": "ac28fb038f13464f97c2a2eedbbb3c52",
+    "name": "customers.csv",
+    "format": "CSV",
+    "rows": 180,
+    "columns": 10,
+    "path": "C:\\Users\\Lenovo\\Documents\\jaismeet\\automate\\data\\ac28fb038f13464f97c2a2eedbbb3c52_customers.parquet",
+    "created_at": "2026-06-19T07:26:44Z"
+  }
+]

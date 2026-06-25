@@ -1,0 +1,16 @@
+[
+  {
+    "group_key": "churn::classification::f1_weighted",
+    "model_id": "f2e9279fdfa84b04afd9e2fcd989bbad",
+    "best_model": "AdaBoost Classifier",
+    "target_column": "churn",
+    "problem_type": "classification",
+    "primary_metric": "f1_weighted",
+    "rank_score": 0.9662,
+    "prediction_api": "/api/predict/f2e9279fdfa84b04afd9e2fcd989bbad",
+    "model_created_at": "2026-06-24T09:58:26Z",
+    "promotion_id": "949e8814d60a4e6d8bf32b450f58871f",
+    "status": "active",
+    "promoted_at": "2026-06-24T10:14:28Z"
+  }
+]
