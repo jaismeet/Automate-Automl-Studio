@@ -1,6 +1,0 @@
-INFO:     Started server process [27764]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
-C:\Users\Lenovo\Documents\jaismeet\automate\app\automl.py:173: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
-  parsed = pd.to_datetime(series, errors="coerce")
